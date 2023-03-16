@@ -1,0 +1,243 @@
+main.partner{
+  background-color: #FFFFFF;
+}
+
+.partnerTitle{
+  display: flex;
+  height: 100vh;
+
+  max-height: 1100px;
+  align-items: center;
+  @include tabletL{
+    flex-direction: column;
+    background: black;
+  }
+  @include mobileL{
+    padding-top: 100px;
+  }
+  .partnerTitle__info{
+    flex: 50% 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5% 0 15%;
+    @include tabletL{
+      text-align: center;
+      padding: 100px 0 0;
+      z-index: 2;
+      flex: none;
+    }
+    @include mobileL{
+      padding: 0;
+    }
+
+    .h2__title{
+      color: var(--midnight);
+      margin-bottom: 20px;
+      @include tabletL{
+        color: #FFFFFF;
+        letter-spacing: 0.25em;
+        margin-bottom: 10px;
+      }
+    }
+    .subtitle{
+      text-align: left;
+      padding-left: 5px;
+      @include tabletL{
+        text-align: center;
+        margin-bottom: -5px;
+      }
+    }
+    .main__btn{
+      width: 163px;
+      @include tabletL{
+        margin: 0 auto;
+        width: auto;
+        padding: 10px 40px;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.2);
+        border: 1.5px solid #FFFFFF;
+        backdrop-filter: blur(12px);
+      }
+    }
+  }
+  .partnerTitle__img{
+    position: relative;
+    width: 50%;
+    flex: 50% 0;
+    height: 100%;
+    @include tabletL{
+      width: 100%;
+      position: absolute;
+      overflow: hidden;
+    }
+    .partnerImg{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .partnerTitle__img:after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 81.11%, #FFFFFF 100%);
+  }
+}
+
+.partner__scroll{
+  display: none;
+  @include tablet{
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    display: flex;
+    position: absolute;
+    z-index: 3;
+    bottom: 50px;
+  }
+}
+.aboutMembers-info.mob{
+  display: none;
+  @include tabletL{
+    display: block;
+  }
+}
+.aboutMembers{
+  display: flex;
+  padding: 200px;
+  z-index: 2;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  .aboutMembers-info-hidden{
+    @include tabletL{
+      display: none;
+    }
+  }
+  @include laptop{
+    padding: 100px;
+  }
+  @include tabletL{
+    flex-direction: column;
+    margin-top: 100px;
+    padding: 100px 0;
+  }
+  @include tablet{
+    padding: 50px 0;
+  }
+  .membership-benefits{
+    flex: 50% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    background: #171C22;
+    box-shadow: 4px 4px 34px rgba(0, 0, 0, 0.12);
+    border-radius: 30px;
+    max-width: 510px;
+    margin-right: 100px;
+    padding: 95px 60px;
+    @include tabletL{
+      width: 100%;
+      max-width: none;
+      border-radius: 0;
+      padding: 60px 30px;
+      flex: none;
+      margin-right: 0;
+      margin-bottom: 40px;
+    }
+    .membership-benefits-title{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      h2{
+        font-family: 'GillSansC';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 27px;
+        line-height: 31px;
+        text-align: center;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        max-width: 300px;
+        margin-top: 10px;
+      }
+    }
+    .benefits__list{
+      margin-top: 45px;
+      display: grid;
+      gap: 15px 50px;
+      grid-template-columns: repeat(2, auto);
+      @include tabletL{
+        gap: 15px 70px;
+      }
+      @include tablet{
+        gap: 15px 30px;
+      }
+      .benefits__item{
+        max-width: 170px;
+        &-title{
+          margin-top: 15px;
+          font-family: 'Faro';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 22px;
+          color: #FFFFFF;
+        }
+        &-text{
+          font-family: 'Faro';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 22px;
+          color: #ADB3BC;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+
+  &-info{
+    flex: 50% 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include tabletL{
+      padding: 0 30px;
+    }
+    .text__title{
+      color: var(--midnight);
+      margin-bottom: 40px;
+      @include tablet{
+        margin-bottom: 30px;
+      }
+    }
+    h3{
+      font-family: 'Faro';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 23px;
+      line-height: 30px;
+      color: var(--midnight);
+      margin: 20px 0;
+    }
+    .main__btn.black{
+      max-width: 163px;
+      display: none;
+      @include tabletL{
+        display: block;
+      }
+      @include tablet{
+        margin-top: -20px;
+      }
+    }
+  }
+
+}

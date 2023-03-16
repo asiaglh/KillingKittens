@@ -1,0 +1,219 @@
+.happens__body{
+  padding: 100px 0px 100px 130px;
+  display: flex;
+  height: 150vh;
+  @include laptop{
+    padding: 100px 0 100px 80px;
+  }
+  @include tabletL{
+    padding: 100px 0 100px 50px;
+  }
+  @include tablet{
+    padding: 0px 20px 100px;
+    height: auto;
+  }
+  .happens__title{
+    @include tablet{
+      text-align: center;
+    }
+  }
+  .happens__info{
+    padding-top: 100px;
+    max-width: 700px;
+    margin-right: 55px;
+    width: 50%;
+    @include tablet{
+      width: 100%;
+      margin-right: 0;
+      max-width: none;
+    }
+    .happens__img{
+      display: none;
+      @include tablet{
+        display: block;
+        width: 100%;
+        margin-top: 30px;
+      }
+    }
+    .h2__title{
+      letter-spacing: 0.25em;
+      max-width: 600px;
+      margin-bottom: 35px;
+      @include tablet{
+        max-width: none;
+        margin-bottom: 20px;
+      }
+    }
+    .subtitle{
+      text-align: left;
+      padding-left: 5px;
+      @include tablet{
+        text-align: center;
+      }
+    }
+    .happens__accordion{
+      margin-bottom: 50px;
+      &-title{
+        margin: 50px 0 40px;
+        font-family: 'GillSansC';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 23px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+      }
+      .accordion-header,
+      .accordion-body {
+        background: transparent;
+      }
+
+      .accordion-header {
+        padding: 25px 0;
+        cursor: pointer;
+        transition: all .3s;
+        @include tabletL{
+          padding: 15px 0;
+        }
+        .h5__title{
+          color: #FFFFFF;
+        }
+      }
+
+      .accordion__item {
+        position: relative;
+        border-bottom: 1px solid #484848;
+        .h3__title{
+          margin-right: 20px;
+        }
+        .accordion__arrow{
+          position: absolute;
+          right: 0;
+          top: 40px;
+          display: none;
+          width: 19px;
+          height: 16px;
+          @include tabletL{
+            top: 22px;
+          }
+        }
+        .accordion__arrow.active{
+          display: block;
+          width: 16px;
+        }
+        &:first-child{
+          border-top: 1px solid #484848;
+        }
+      }
+
+
+      .accordion-header:hover {
+        position: relative;
+        z-index: 2;
+      }
+
+      .accordion-body {
+        color: #353535;
+        display: none;
+      }
+
+      .accordion-body__contents {
+        padding: 15px 0;
+        .main__text{
+          color: #FFFFFF;
+        }
+      }
+
+      .accordion__item.active:last-child .accordion-header {
+        border-radius: 0;
+      }
+
+      .accordion__item.active{
+        .accordion__arrow{
+          display: block;
+        }
+        .accordion__arrow.active{
+          display: none;
+        }
+      }
+
+      .accordion:first-child > .accordion__item > .accordion-header {
+        border-bottom: 1px solid transparent;
+      }
+
+      .accordion__item > .accordion-header:after {
+        font-size: 1.2em;
+        float: right;
+        position: relative;
+        top: -2px;
+        transition: .3s all;
+        transform: rotate(0deg);
+      }
+
+      .accordion__item.active > .accordion-header:after {
+        transform: rotate(-180deg);
+      }
+
+      .accordion__item .accordion__item .accordion-header {
+        color: #353535;
+      }
+
+      @media screen and (max-width: 1000px) {
+        body {
+          padding: 1em;
+        }
+
+        .accordion {
+          width: 100%;
+        }
+      }
+
+
+    }
+    .main__btn{
+      margin-top: 50px;
+      color: #FFFFFF;
+      background: #000000;
+      border: 1.5px solid #FFFFFF;
+      backdrop-filter: blur(12px);
+      transition: 0.4s;
+      &:hover{
+        background: #FFFFFF;
+        color: #000000;
+      }
+    }
+  }
+  .happens__img{
+    width: 50%;
+    max-height: 820px;
+    position: relative;
+    @include tablet{
+      display: none;
+    }
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &:before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 30%;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0) 68.64%, #000000 100%);
+    }
+    &:after{
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 68.64%, #000000 100%);
+    }
+  }
+}
+

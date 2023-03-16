@@ -1,0 +1,492 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap');
+
+.main{
+  background: black;
+  .title{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    height: 100vh;
+    min-height: 500px;
+    max-height: 1100px;
+    .h1__title{
+      @include mobileL{
+        font-size: 43px;
+        line-height: 49px;
+      }
+    }
+    .title__info{
+      text-align: center;
+      z-index: 1;
+      .text__title{
+        margin:0  auto 20px;
+        max-width: 680px;
+
+      }
+      .main__btn.exploreParties{
+          color: #FFFFFF;
+        background: rgba(0, 0, 0, 0.2);
+        border: 1.5px solid #FFFFFF;
+        backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
+          transition: 0.4s;
+          &:hover{
+            background: #FFFFFF;
+            color: #000000;
+          }
+      }
+      @include mobileL{
+        padding:0 15px;
+      }
+    }
+    #myVideo {
+      top:0;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &:after{
+      display: none;
+      @include tablet{
+        display: block;
+      }
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      bottom: 0px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 85.1%, #FFFFFF 99.3%);
+    }
+  }
+
+  .main__scroll{
+    position: absolute;
+    bottom: 50px;
+    z-index: 2;
+    justify-content: center;
+    display: none;
+    @include mobileL{
+      display: flex;
+    }
+  }
+
+  .sexParties{
+    background: #FFFFFF;
+    position: relative;
+    height: 100vh;
+    min-height: 500px;
+    max-height: 1060px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include tablet{
+      flex-direction: column;
+      height: auto;
+    }
+    .gradient__bg{
+      background:linear-gradient(90deg, #FFFFFF 49.93%, rgba(255, 255, 255, 0) 57.89%);
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      position: relative;
+      @include tablet{
+        background: #FFFFFF;
+      }
+    }
+
+    .container{
+      position: absolute;
+      background-image: url("../img/main__gon.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center -250px;
+      @include laptop{
+        background-position: center;
+      }
+      width: 100%;
+      right: 0;
+      top: 0;
+      height: 100%;
+      z-index: 0;
+      @include tablet{
+        position: relative;
+        height: 620px;
+      }
+      &:after{
+        display: none;
+        @include tablet{
+          display: block;
+        }
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 80.1%, #FFFFFF 98.3%), linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 24.69%), linear-gradient(0deg, #000000 -2.29%, rgba(0, 0, 0, 0) 23.11%),
+      }
+    }
+    img{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: right;
+    }
+    
+    .sexParties__mobile{
+      display: none;
+      @include mobileL{
+        display: block;
+      }
+    }
+
+    .sexParties__info-wrapper{
+      position: absolute;
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 100%;
+      padding: 0 40px;
+      @include tablet{
+        position: relative;
+        width: 100%;
+        height: auto;
+        background: #FFFFFF;
+        text-align: center;
+        padding: 10px 20px;
+      }
+    }
+    .sexParties__info{
+      max-width: 650px;
+      .h2__title, .text__title{
+        color: var(--midnight);
+      }
+      .subtitle{
+        text-align: left;
+        padding-left: 5px;
+        @include tablet{
+          text-align: center;
+        }
+      }
+      @include laptop{
+        margin-left: 0;
+      }
+      @include tabletL{
+        top: 20%;
+        max-width: 500px;
+      }
+      @include mobileL{
+        margin-right: 10px;
+        top: -35vh;
+      }
+    }
+  }
+
+  .bodyPositive{
+    height: 100vh;
+    width: 100%;
+    max-height: 1060px;
+    display: flex;
+    position: relative;
+    @include tablet{
+      flex-direction: column-reverse;
+      height: auto;
+    }
+
+    .container{
+      background: url("../img/body.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 10px -200px;
+      position: absolute;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      @include tablet{
+        position: relative;
+        min-height: 620px;
+        height: 100%;
+        background-position: left;
+        width: 100%;
+      }
+      &:after{
+        display: none;
+        @include tablet{
+          display: block;
+        }
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 80.1%, #FFFFFF 98.3%), linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 24.69%), linear-gradient(0deg, #000000 -2.29%, rgba(0, 0, 0, 0) 23.11%),
+      }
+    }
+    .gradient__bg{
+      background:linear-gradient(269.83deg, #FFFFFF 49.93%, rgba(255, 255, 255, 0) 57.89%);
+      position: absolute;
+      height: 100%;
+      width: 105%;
+      top: 0;
+      right: 0;
+      @include tablet{
+        background: transparent;
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+    }
+    .bodyPositive__info-wrapper{
+      width: 50%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      right: 0;
+      padding: 0 40px;
+      @include tablet{
+        position: relative;
+        width: 100%;
+        height: auto;
+        background: #FFFFFF;
+        text-align: center;
+        padding: 10px;
+      }
+    }
+    .bodyPositive__info{
+      max-width: 610px;
+      width: 100%;
+      .h2__title, .text__title{
+        color: var(--midnight);
+      }
+      .h2__title{
+        letter-spacing: 0.25em;
+        margin-bottom: 10px;
+      }
+      .subtitle{
+        text-align: left;
+        padding-left: 5px;
+        @include tablet{
+          text-align: center;
+        }
+      }
+
+    }
+  }
+
+
+
+  .stories{
+    width: 100%;
+    background: #FFFFFF;
+    .stories__body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding:120px;
+      flex-wrap: wrap;
+      @include tabletL{
+        padding: 10px 80px;
+        flex-direction: column;
+      }
+      @include mobileL{
+        padding: 0;
+      }
+      .stories__info{
+        flex: 40% 0;
+        margin-right: -30px;
+        .subtitle{
+          text-align: left;
+          padding-left: 5px;
+          @include tablet{
+            text-align: center;
+          }
+        }
+        @include laptop{
+          margin-right: 0;
+        }
+        @include tabletL{
+          text-align: center;
+        }
+        .h2__title.stories{
+          color: var(--midnight);
+          letter-spacing: 0.25em;
+          margin-bottom: 25px;
+          @include mobileL{
+            font-size: 27px;
+            line-height: 35px;
+          }
+        }
+       .main__btn.wallOfLove{
+         margin-bottom: 20px;
+         @include mobileL{
+           display: none;
+         }
+       }
+      }
+      .stories__video{
+        flex: 60% 0;
+        position: relative;
+        @include mobileL{
+          margin-top: 10px;
+        }
+        .mainVideo{
+          width:100%;
+          height: auto;
+          object-fit: contain;
+          border-radius: 20px;
+          @include mobileL{
+            border-radius: 0;
+          }
+        }
+      }
+    }
+  }
+  .partyList{
+    padding: 40px 30px 100px;
+    width: 100%;
+    background: #FFFFFF;
+    @include tablet{
+      padding: 40px 20px;
+    }
+    @include mobileL{
+      padding: 40px 15px;
+    }
+    .partyList__info{
+      text-align: center;
+      .h2__title{
+        color: var(--midnight);
+        @include mobileL{
+          font-size: 27px;
+        }
+      }
+      .main__btn.black{
+        margin-bottom: 60px;
+        @include mobileL{
+          padding: 10px 40px;
+          margin-bottom: 0px;
+        }
+      }
+    }
+    .partyList__slider{
+      height: 420px;
+      padding-top: 20px;
+      @include mobileL{
+        padding: 20px 0;
+      }
+      @include tabletL{
+        height:auto;
+      }
+      @include laptop{
+        height: 340px;
+      }
+      .party__slide{
+        display: block;
+        position: relative;
+        height: 350px;
+        border-radius: 20px;
+        padding: 20px;
+        transition: 0.3s;
+        @include laptop{
+          height: 280px;
+        }
+        .party__slide-bg{
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          border-radius: 20px;
+          object-fit: cover;
+        }
+        .party__calendar{
+          right: 20px;
+        }
+        .party__info{
+          z-index: 2;
+          position: absolute;
+          bottom: 15px;
+          @include mobileL{
+            bottom: 10px;
+          }
+          .party__title{
+            font-family: 'GillSansMedium';
+            font-weight: 400;
+            font-size: 30px;
+            line-height: 35px;
+            letter-spacing: 0.20em;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            padding-bottom: 5px;
+            @include tabletL{
+              font-size: 24px;
+              line-height: 26px;
+            }
+          }
+          .party__location{
+             display: flex;
+             align-items: center;
+             .geo__location{
+               width: 15px;
+               height: 18px;
+              }
+            .text__title{
+              font-size: 14px;
+              margin-left: 8px;
+              @include laptop{
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+      .party__slide:after{
+        content: "";
+        display: block;
+        width: 100%;
+        height: 70%;
+        position: absolute;
+        bottom: 0;
+
+        margin-left: -20px;
+        border-radius: 20.3px;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 42.32%, rgb(0, 0, 0) 100%);
+      }
+      .party__slide:hover{
+        transform: scale(1.05);
+        @include tablet{
+          transform: none;
+        }
+      }
+      .swiper-scrollbar{
+        position: relative;
+        cursor: pointer;
+        width: 300px;
+        margin: -5px auto;
+        @include tabletL {
+          display: none;
+        }
+      }
+      .swiper-scrollbar-drag{
+        cursor: pointer;
+        width: auto;
+        background: black;
+        @include tabletL {
+          display: none;
+        }
+      }
+    }
+  }
+}

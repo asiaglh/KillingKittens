@@ -1,0 +1,173 @@
+.heritageTitle{
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: row-reverse;
+  padding-top: 5%;
+  height: 100vh;
+  @include tabletL{
+    display: block;
+    height: auto;
+  }
+  .heritageInfo{
+    flex: 50% 0;
+    display: flex;
+    margin:5% 0 0 100px;
+    padding-right: 5%;
+    justify-content: center;
+    flex-direction: column;
+    .subtitle{
+      text-align: left;
+      padding-left: 5px;
+      @include tabletL{
+        text-align: center;
+      }
+    }
+    .main__text{
+      line-height: 35px;
+      @include mobileL{
+        font-size: 16px;
+      }
+    }
+
+    @include tabletL{
+      padding:100px 50px 20px;
+      margin: 0;
+    }
+    @include mobileL{
+      position: relative;
+      padding:0 20px 0;
+      top: -50px;
+    }
+    .h2__title{
+      color: var(--midnight);
+      @include mobileL{
+        font-size: 27px;
+        line-height: 37px;
+      }
+    }
+    @include tabletL{
+      margin-top: -100px;
+      z-index: 3;
+      text-align: center;
+    }
+    @include mobileL{
+      margin-top: 0;
+    }
+  }
+  .heritageImg{
+    position: relative;
+    flex: 50% 0;
+    height: 100%;
+    @include tabletL{
+     height: 550px;
+      top: -50px;
+    }
+    img{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+  }
+  .heritageImg:before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom, rgb(255, 255, 255) 53.96%, rgba(255, 255, 255, 0) 90%);
+  }
+  .heritageImg:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-image: linear-gradient(to bottom, rgba(245, 245, 246, 0) 37.63%, #ffffff 100%);
+    @include tabletL{
+      height: 70%;
+    }
+  }
+
+}
+
+.queenKitten{
+  background: #FFFFFF;
+  display: flex;
+  padding: 10%;
+  .subtitle{
+    text-align: left;
+    @include tabletL{
+      text-align: center;
+    }
+  }
+  @include laptop{
+    padding: 100px 50px 100px 50px;
+  }
+  @include tabletL{
+    padding: 100px 50px 50px;
+    flex-direction: column;
+
+  }
+  @include tablet{
+    padding: 20px 50px 40px;
+  }
+  @include mobileL{
+    padding: 0 20px 40px;
+  }
+  .queenImg{
+    flex:50% 0;
+    display: flex;
+    align-items: flex-start;
+    padding-right: 100px;
+    height: 740px;
+    @include laptop{
+      padding: 0 50px;
+    }
+    @include tabletL{
+      padding: 0;
+      margin: 0 100px;
+      position: relative;
+      align-items: center;
+    }
+    @include tablet{
+      margin: 0 120px;
+    }
+    @include mobileL{
+      margin: 0;
+    }
+    img{
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+      object-fit: cover;
+    }
+  }
+  .queenImg:after {
+    @include tabletL{
+      content: "";
+      display: block;
+      width: 100%;
+      height: 60%;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background-image: linear-gradient(to bottom, rgba(245, 245, 246, 0) 37.63%, #ffffff 100%);
+    }
+  }
+  .queenInfo{
+    flex: 50% 0;
+    @include tabletL{
+      margin-top: 20px;
+      text-align: center;
+    }
+    svg{
+      margin-bottom: 15px;
+    }
+  }
+}

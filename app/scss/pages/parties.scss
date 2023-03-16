@@ -1,0 +1,110 @@
+.header.white{
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.7) 73.96%, rgba(255, 255, 255, 0) 100%);
+
+   .nav__item.white{
+    background: rgba(255, 255, 255, 0.9);
+    border: 1.5px solid #000000;
+    color: black;
+  }
+  .nav__item.login.white{
+    background: black;
+    color: #FFFFFF;
+    border: 1.5px solid #FFFFFF;
+  }
+  .header__burger.white{
+    &:before, &:after {
+      background: #000000;
+    }
+    span{
+      background: #000000;
+    }
+  }
+  .header__logo.white{
+    opacity: 0;
+  }
+  .header__logo.black{
+    opacity: 1;
+  }
+}
+
+.header.white.fon{
+  background: #FFFFFF;
+  .header__logo.white{
+    opacity: 0;
+  }
+  .header__logo.black{
+    opacity: 1;
+  }
+}
+.main.parties{
+  background: #FFFFFF;
+}
+.partyList.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  @include tabletL{
+    padding: 110px 100px 40px;
+  }
+  @include tablet{
+    padding: 110px 50px 40px;
+  }
+  @include mobileL{
+    padding: 90px 25px 30px;
+  }
+ .partyList__info{
+   padding: 70px 0 50px;
+   max-width: 630px;
+   @include tabletL{
+     padding: 20px;
+   }
+   .h2__title{
+     @include mobileL{
+       font-size: 32px;
+     }
+   }
+   @include mobileL{
+     padding: 20px 0 0;
+   }
+ }
+  .partyList__slider.blocks{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    height: auto;
+    gap: 25px;
+    @include tabletL{
+      grid-template-columns: repeat(2, 4fr);
+
+    }
+    @include tablet{
+      grid-template-columns: repeat(1,8fr);
+      gap: 0;
+      padding: 20px 0 0;
+    }
+    .party__slide.block{
+
+      .party__title{
+        font-size: 30px;
+        line-height: 37px;
+      }
+      .text__title{
+        font-size: 14px;
+      }
+      width: 100%;
+      margin-bottom: 20px;
+      @include laptop{
+        height: 350px;
+      }
+      @include tablet{
+        margin-bottom: 15px;
+      }
+      @include mobileL{
+        height: 280px;
+      }
+    }
+  }
+}
+

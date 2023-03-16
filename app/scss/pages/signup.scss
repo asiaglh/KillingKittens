@@ -1,0 +1,14 @@
+.signUpInput-send{
+  margin-top: 10%;
+  text-align: center;
+  .text__title{
+    margin: 10px 0px;
+    @include tabletL{
+      font-size: 16px;
+    }
+  }
+  @include tabletL{
+    padding: 0;
+    margin-bottom: -50px;
+  }
+}

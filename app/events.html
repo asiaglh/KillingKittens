@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="css/app.min.css">
+    <link rel="stylesheet" href="fonts/stylesheet.css">
+    <link rel="stylesheet" href="fonts/stylesheet2.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <title>Events</title>
+</head>
+<body>
+<header class="header eventsHeader">
+    <div class="header__body">
+
+        <a class="logo__link" href="index.html">
+                 <span class="small__logo">
+                 <svg class="header__logo inactive" width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.19945 2.5625V2.84534C6.12246 2.84534 5.53376 2.97554 5.53376 4.56293V24.0362C5.53376 25.5165 5.9751 25.8846 7.0297 25.8846V26.1681H0V25.8846C1.0286 25.8846 1.3717 25.5165 1.3717 24.0362V4.56293C1.3717 3.21413 1.05243 2.84534 0 2.84534V2.5625H7.19945ZM16.766 25.2607C16.4662 25.0497 16.1505 24.7681 15.8226 24.3859C15.8226 24.3859 15.5041 24.0184 12.4132 20.353C12.0368 19.9065 11.6202 19.412 11.1579 18.8634L11.1565 18.8617L11.1506 18.8547C10.6824 18.2991 10.1675 17.688 9.60047 17.0153C10.6442 15.907 11.576 15.0014 12.4132 14.2619C14.5737 12.3512 16.0949 11.5514 17.2326 11.2724C17.6089 11.1807 17.9441 11.1442 18.246 11.1442V10.8613H18.241H11.0408H10.1646V11.1442C13.1283 11.1871 11.2416 14.7968 10.3604 15.6447L6.58691 19.4069C6.58691 19.4069 7.66607 20.6679 9.06161 22.4502C10.4391 24.1909 11.2026 25.1312 12.0029 25.6301C12.7123 26.0721 13.4505 26.1683 14.6705 26.1683H18.0712H18.7863V25.8854L18.7695 25.8848C18.2993 25.8689 17.5968 25.8451 16.766 25.2607ZM32.036 30.6566C32.3639 31.0388 32.6796 31.321 32.9794 31.5314C33.8102 32.1157 34.5127 32.1396 34.9829 32.1555L34.9997 32.1561V32.4389H34.2846H30.8839C29.6639 32.4389 28.9257 32.3434 28.2163 31.9008C27.416 31.4018 26.6525 30.4616 25.275 28.7209C23.8795 26.9385 17.5605 19.4076 17.5605 19.4076L21.334 15.6447C22.216 14.7968 24.102 11.1871 21.1382 11.1448V10.8613H22.0151H29.2146H29.2197V11.1448C28.9177 11.1448 28.5833 11.1814 28.2069 11.2731C27.0686 11.5521 25.5473 12.3519 23.3868 14.2619C22.5504 15.002 21.6179 15.9076 20.5741 17.0153C21.1812 17.7359 23.24 20.1945 25.1336 22.4558C26.7658 24.4049 28.2752 26.2074 28.6266 26.6243C31.7175 30.2891 32.036 30.6566 32.036 30.6566Z" fill="#315369"/>
+             </svg>
+                 <svg class="header__logo active" width="35" height="30" viewBox="0 0 35 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path fill-rule="evenodd" clip-rule="evenodd" d="M7.19945 0V0.282844C6.12246 0.282844 5.53376 0.413042 5.53376 2.00043V21.4737C5.53376 22.954 5.9751 23.3221 7.0297 23.3221V23.6056H0V23.3221C1.0286 23.3221 1.3717 22.954 1.3717 21.4737V2.00043C1.3717 0.651632 1.05243 0.282844 0 0.282844V0H7.19945ZM16.766 22.6982C16.4662 22.4872 16.1505 22.2056 15.8226 21.8234C15.8226 21.8234 15.5041 21.4559 12.4132 17.7905C12.0368 17.344 11.6202 16.8495 11.1579 16.3009L11.1565 16.2992L11.1506 16.2922C10.6824 15.7366 10.1675 15.1255 9.60047 14.4528C10.6442 13.3445 11.576 12.4389 12.4132 11.6994C14.5737 9.78873 16.0949 8.98894 17.2326 8.70995C17.6089 8.61823 17.9441 8.58167 18.246 8.58167V8.29883H18.241H11.0408H10.1646V8.58167C13.1283 8.62464 11.2416 12.2343 10.3604 13.0822L6.58691 16.8444C6.58691 16.8444 7.66607 18.1054 9.06161 19.8877C10.4391 21.6284 11.2026 22.5687 12.0029 23.0676C12.7123 23.5096 13.4505 23.6058 14.6705 23.6058H18.0712H18.7863V23.3229L18.7695 23.3223C18.2993 23.3064 17.5968 23.2826 16.766 22.6982ZM32.036 28.0941C32.3639 28.4763 32.6796 28.7585 32.9794 28.9689C33.8102 29.5532 34.5127 29.5771 34.9829 29.593L34.9997 29.5936V29.8764H34.2846H30.8839C29.6639 29.8764 28.9257 29.7809 28.2163 29.3383C27.416 28.8393 26.6525 27.8991 25.275 26.1584C23.8795 24.376 17.5605 16.8451 17.5605 16.8451L21.334 13.0822C22.216 12.2343 24.102 8.62464 21.1382 8.58231V8.29883H22.0151H29.2146H29.2197V8.58231C28.9177 8.58231 28.5833 8.61887 28.2069 8.71059C27.0686 8.98958 25.5473 9.78937 23.3868 11.6994C22.5504 12.4395 21.6179 13.3451 20.5741 14.4528C21.1812 15.1734 23.24 17.632 25.1336 19.8933C26.7658 21.8424 28.2752 23.6449 28.6266 24.0618C31.7175 27.7266 32.036 28.0941 32.036 28.0941Z" fill="white"/>
+                 </svg>
+                </span>
+            <span class="big__logo">
+                     <img src="img/LogoBlack.svg" alt="" class="header__logo inactive"><img src="img/Logo.svg" alt="" class="header__logo active">
+                 </span>
+        </a>
+
+        <div class="header__nav">
+            <div class="nav__items-wrapper">
+                <a href="signup.html" class="nav__item signUp">Sign up</a>
+                <a href="login.html" class="nav__item login">Login</a>
+            </div>
+            <div class="header__burger black">
+                <span></span>
+            </div>
+            <div class="burger__menu">
+                <div class="menu__items">
+                    <div class="menu__items-wrapper">
+                        <a  class="menu__item parties" href="parties.html">Parties <span class="subItem">BROWSE UPCOMING PARTIES</span></a>
+                        <a  class="menu__item values" href="manifesto.html">OUR Values<span class="subItem ">Body positivity and Toxic Masculinity</span></a>
+                        <a class="menu__item membership" href="partner.html">Membership<span class="subItem ">Explore membership benefits</span></a>
+                        <a  class="menu__item happens" href="happens.html">What happens at kk<span class="subItem">safety and Consent</span></a>
+                        <a  class="menu__item stories" href="stories.html">KITTEN & Proud<span class="subItem">Love from our Members</span></a>
+                        <a  target="_blank" class="menu__item merch" href="https://itsakittensworld.com/">MERCH<span class="subItem">BUY MASKS AND KK MERCH <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M13.875 3.75C13.875 3.33579 14.2108 3 14.625 3H20.25C20.6642 3 21 3.33579 21 3.75V9.375C21 9.78921 20.6642 10.125 20.25 10.125C19.8358 10.125 19.5 9.78921 19.5 9.375V4.5H14.625C14.2108 4.5 13.875 4.16421 13.875 3.75Z" fill="url(#paint0_linear_2762_22144)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M20.7803 3.21967C21.0732 3.51256 21.0732 3.98744 20.7803 4.28033L14.0303 11.0303C13.7374 11.3232 13.2626 11.3232 12.9697 11.0303C12.6768 10.7374 12.6768 10.2626 12.9697 9.96967L19.7197 3.21967C20.0126 2.92678 20.4874 2.92678 20.7803 3.21967Z" fill="url(#paint1_linear_2762_22144)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M3.43934 6.43934C3.72064 6.15804 4.10217 6 4.5 6H10.5C10.9142 6 11.25 6.33579 11.25 6.75C11.25 7.16421 10.9142 7.5 10.5 7.5L4.5 7.5L4.5 19.5H16.5V13.5C16.5 13.0858 16.8358 12.75 17.25 12.75C17.6642 12.75 18 13.0858 18 13.5V19.5C18 19.8978 17.842 20.2794 17.5607 20.5607C17.2794 20.842 16.8978 21 16.5 21H4.5C4.10218 21 3.72065 20.842 3.43934 20.5607C3.15804 20.2794 3 19.8978 3 19.5V7.5C3 7.10217 3.15804 6.72064 3.43934 6.43934Z" fill="url(#paint2_linear_2762_22144)"/>
+<defs>
+<linearGradient id="paint0_linear_2762_22144" x1="17.4375" y1="3" x2="17.4375" y2="10.125" gradientUnits="userSpaceOnUse">
+<stop stop-color="#A3B7C7"/>
+<stop offset="1" stop-color="#738A9C"/>
+</linearGradient>
+<linearGradient id="paint1_linear_2762_22144" x1="16.875" y1="3" x2="16.875" y2="11.25" gradientUnits="userSpaceOnUse">
+<stop stop-color="#A3B7C7"/>
+<stop offset="1" stop-color="#738A9C"/>
+</linearGradient>
+<linearGradient id="paint2_linear_2762_22144" x1="10.5" y1="6" x2="10.5" y2="21" gradientUnits="userSpaceOnUse">
+<stop stop-color="#A3B7C7"/>
+<stop offset="1" stop-color="#738A9C"/>
+</linearGradient>
+</defs>
+</svg></span></a>
+                        <a  class="menu__item app"  href="theApps.html">THE APP<span class="subItem">CHAT, MEET And DATE KK MEMBERS</span></a>
+                    </div>
+                    <div class="social__nav headerNav">
+                        <div class="svg__nav"><a target="_blank" href="#" class="social__item instagram"><img src="img/inst.svg" alt=""></a>
+                            <a target="_blank" href="#" class="social__item facebook"><img src="img/facebook.svg" alt=""></a>
+                            <a target="_blank" href="#" class="social__item twitter"><img src="img/twitter.svg" alt=""></a>
+                            <a target="_blank" href="#" class="social__item linkedln"><img src="img/linkedln.svg" alt=""></a>
+                        </div>
+                        <div class="text__nav">
+
+                            <a  href="heritage.html" class="social__item partner">Our heritage</a>
+                            <a target="_blank" href="https://wearekk.com/press/" class="social__item press">Press</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="menuImg__list">
+                    <div class="menuImg__list-wrapper">
+                        <img src="img/header.jfif" alt="" class="menuImg__item active">
+                        <video id="parties"  class="menuImg__item hls-video"
+                               data-url="https://customer-6a4xpwe335oywcc8.cloudflarestream.com/2c17d6af075fa248f2c6a413616e3621/manifest/video.m3u8"  autoplay playsinline loop oncontextmenu="return false;"  preload="auto" muted>
+                        </video>
+                        <img id="happens" class="menuImg__item" alt="" src="img/safety_menu.png">
+                        <video id="values"  class="menuImg__item hls-video"
+                               data-url="https://customer-6a4xpwe335oywcc8.cloudflarestream.com/d4ae495bd3d00821a4cb1e56f1b9e9f8/manifest/video.m3u8" autoplay playsinline loop oncontextmenu="return false;"  preload="auto" muted>
+                        </video>
+                        <video id="stories"  class="menuImg__item hls-video"
+                               data-url="https://customer-6a4xpwe335oywcc8.cloudflarestream.com/8a2be9404fc82412b6879e159f6bdaef/manifest/video.m3u8" autoplay playsinline loop oncontextmenu="return false;"  preload="auto" muted>
+                        </video>
+                        <video id="merch"  class="menuImg__item hls-video"
+                               data-url="https://customer-6a4xpwe335oywcc8.cloudflarestream.com/582f4a1d934cbd2971bb591e1d463f90/manifest/video.m3u8" autoplay playsinline loop oncontextmenu="return false;"  preload="auto" muted>
+                        </video>
+                        <video id="app"  class="menuImg__item hls-video"
+                               data-url="https://customer-6a4xpwe335oywcc8.cloudflarestream.com/685f79b6a2fdb08fae68ac1243c891c1/manifest/video.m3u8" autoplay playsinline loop oncontextmenu="return false;"  preload="auto" muted>
+                        </video>
+                        <img id="membership" class="menuImg__item" alt="" src="img/faq_menu.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="main events">
+
+    <div class="eventMobileSlider">
+        <a href="parties.html" class="btn__toParties"><svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#filter0_b_1761_20261)">
+                <rect width="35" height="35" rx="17.5" fill="black" fill-opacity="0.6"/>
+                <path d="M21.5708 10.164C21.4763 10.0693 21.3641 9.99418 21.2405 9.9429C21.1169 9.89163 20.9845 9.86523 20.8507 9.86523C20.7169 9.86523 20.5844 9.89163 20.4609 9.9429C20.3373 9.99418 20.2251 10.0693 20.1306 10.164L13.3688 16.9258C13.2934 17.0011 13.2335 17.0905 13.1927 17.1889C13.1519 17.2874 13.1309 17.3929 13.1309 17.4995C13.1309 17.606 13.1519 17.7115 13.1927 17.81C13.2335 17.9084 13.2934 17.9978 13.3688 18.0731L20.1306 24.8349C20.5293 25.2336 21.1721 25.2336 21.5708 24.8349C21.9695 24.4362 21.9695 23.7933 21.5708 23.3946L15.6797 17.4954L21.5789 11.5961C21.9695 11.2056 21.9695 10.5546 21.5708 10.164Z" fill="white"/>
+            </g>
+            <defs>
+                <filter id="filter0_b_1761_20261" x="-4" y="-4" width="43" height="43" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                    <feGaussianBlur in="BackgroundImageFix" stdDeviation="2"/>
+                    <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_1761_20261"/>
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_1761_20261" result="shape"/>
+                </filter>
+            </defs>
+        </svg>
+        </a>
+        <div class="eventSlider swiper">
+            <div class="swiper-wrapper">
+                <div class="eventSlideVideo swiper-slide ">
+                    <video autoplay="autoplay" loop="loop"  playsinline  oncontextmenu="return false;"  preload="auto" muted id="eventVideoMob"
+                           class="eventSlide-video hls-video" data-url="https://customer-6a4xpwe335oywcc8.cloudflarestream.com/9832495a51b7c2317c69007a23690d92/manifest/video.m3u8">
+                </video>
+                   </div>
+                <div class="eventSlide swiper-slide"> <img src="img/back1.png" alt="" class="eventTitle__fon 2fon"></div>
+                <div class="eventSlide swiper-slide"><img src="img/back2.png" alt="" class="eventTitle__fon 4fon"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+    <div class="eventTitle">
+        <div class="eventTitle__fon 1fon active">
+    <video  autoplay="autoplay" loop="loop"  playsinline  oncontextmenu="return false;"  preload="auto"
+            id="eventVideoDesc" class="eventTitle__fon 1fon active hls-video" data-url="https://customer-6a4xpwe335oywcc8.cloudflarestream.com/9832495a51b7c2317c69007a23690d92/manifest/video.m3u8">
+    </video>
+        </div>
+
+        <img src="img/back1.png" alt="" class="eventTitle__fon 2fon">
+        <img src="img/back2.png" alt="" class="eventTitle__fon 3fon">
+        <img src="img/party2.png" alt="" class="eventTitle__fon 4fon">
+
+        <div class="eventTitle__info">
+            <h2 class="h2__title">KREATURES OF THE NIGHT</h2>
+            <p class="eventTitle__data">
+                Saturday 1st Jan 2022   <span class="data__span">9:00pm (GMT)</span>
+            </p>
+            <div class="party__location">
+                <img class="geo__location " src="img/geo.png" alt="">
+                <p class="text__title">Secret Covent Garden Location</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="aboutEvent">
+            <div class="eventInfo">
+
+            <div class="eventNavBar">
+            <a class="eventNav__link" id="1fon" href="#"><img src="img/v1.png" alt=""><svg width="17" height="22" viewBox="0 0 17 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.4707 12.1389L2.51124 20.762C1.41142 21.493 0 20.6078 0 19.134V1.88798C0 0.41655 1.40939 -0.470979 2.51124 0.2624L15.4707 8.88543C15.7209 9.04921 15.9288 9.28596 16.0735 9.57165C16.2181 9.85734 16.2943 10.1818 16.2943 10.5122C16.2943 10.8425 16.2181 11.167 16.0735 11.4527C15.9288 11.7384 15.7209 11.9751 15.4707 12.1389Z" fill="white"/>
+            </svg>
+            </a>
+            <a class="eventNav__link" id="2fon" href="#"><img src="img/v2.png" alt=""></a>
+            <a class="eventNav__link" id="3fon" href="#"><img src="img/v3.png" alt=""></a>
+            <a class="eventNav__link" id="4fon" href="#"><img src="img/v4.png" alt=""></a>
+        </div>
+
+            <div class="saleInfo">
+                <div class="saleInfo__line"></div>
+                <h1 class="h1__title">KREATURES OF THE NIGHT</h1>
+                <div class="saleInfo__data">
+                    <div class="party__calendar">
+                        <p class="calendar__month">Jan</p>
+                        <h3 class="calendar__day">01</h3>
+                    </div>
+                    <div class="saleInfo__content">
+                        <h6 class="h6__title">Saturday 1st Jan 2022</h6>
+                        <p class="party__time">9:00pm (GMT)</p>
+                        <a href="#" class="toCalendar">Add to calendar</a>
+                    </div>
+                </div>
+
+                <div class="saleInfo__data location">
+                    <svg width="15" height="21" viewBox="0 0 15 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.56482 9.76997C6.05692 9.76997 4.8272 8.58947 4.8272 7.14021C4.8272 5.69031 6.05558 4.50981 7.56482 4.50981C9.07272 4.50981 10.2998 5.68902 10.2998 7.14021C10.2998 8.59012 9.07138 9.76997 7.56482 9.76997ZM12.792 2.11024C11.3777 0.749706 9.49466 0 7.49327 0C5.49321 0 3.61018 0.750349 2.19523 2.11024C-0.424038 4.62876 -0.749691 9.36683 1.48976 12.239L7.49327 20.5751L13.4894 12.2499C15.7382 9.36683 15.4112 4.62876 12.792 2.11024Z" fill="#738A9C"/>
+                    </svg>
+                    <a class="saleInfo__content location">
+
+                        <h6 class="h6__title">Secret Covent Garden Location</h6>
+                        <p class="party__location">London</p>
+                    </a>
+                    <svg class="saleInfo__arrow" width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.22246 1.16405C1.32072 1.06933 1.43745 0.994179 1.56596 0.942903C1.69447 0.891628 1.83224 0.865234 1.97138 0.865234C2.11052 0.865234 2.24828 0.891628 2.3768 0.942903C2.50531 0.994179 2.62204 1.06933 2.7203 1.16405L9.75252 7.92581C9.83097 8.00108 9.89321 8.0905 9.93568 8.18893C9.97814 8.28737 10 8.39289 10 8.49946C10 8.60602 9.97814 8.71155 9.93568 8.80998C9.89321 8.90841 9.83097 8.99783 9.75252 9.07311L2.7203 15.8349C2.30564 16.2336 1.63711 16.2336 1.22246 15.8349C0.807802 15.4362 0.807802 14.7933 1.22246 14.3946L7.34921 8.49539L1.214 2.59614C0.807803 2.20557 0.807802 1.55462 1.22246 1.16405Z" fill="#ADB3BC"/>
+                    </svg>
+
+                </div>
+
+                <div class="saleInfo__data people ">
+
+                    <div class="saleInfo__content people" data-people="1">
+                        <div class="people__svg">
+                            <svg class="peopleOne" width="10" height="21" viewBox="0 0 10 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.65938 4.63417C5.98464 4.63417 7.05899 3.60115 7.05899 2.32685C7.05899 1.05255 5.98464 0.0195312 4.65938 0.0195312C3.33411 0.0195312 2.25977 1.05255 2.25977 2.32685C2.25977 3.60115 3.33411 4.63417 4.65938 4.63417Z" fill="#171C22"/>
+                                <path d="M6.21258 5.29918H3.10629C2.31706 5.26879 1.54738 5.53993 0.965365 6.05339C0.383351 6.56685 0.0362962 7.2809 0 8.03959V11.9598C0.012341 12.4023 0.168896 12.8299 0.44757 13.1823C0.726243 13.5346 1.11296 13.7939 1.55315 13.9236V19.27C1.52743 19.6939 1.67575 20.1105 1.9662 20.4303C2.25666 20.7501 2.66604 20.9474 3.10629 20.98H6.21258C6.65284 20.9474 7.06222 20.7501 7.35267 20.4303C7.64313 20.1105 7.79145 19.6939 7.76573 19.27V13.9236C8.20591 13.7939 8.59263 13.5346 8.87131 13.1823C9.14998 12.8299 9.30654 12.4023 9.31888 11.9598V8.03959C9.28258 7.2809 8.93552 6.56685 8.35351 6.05339C7.7715 5.53993 7.00182 5.26879 6.21258 5.29918V5.29918Z" fill="#171C22"/>
+                            </svg>
+                            <svg class="peopleTwo" width="10" height="22" viewBox="0 0 10 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.05977 5.04628C6.38504 5.04628 7.45938 4.01326 7.45938 2.73896C7.45938 1.46466 6.38504 0.431641 5.05977 0.431641C3.7345 0.431641 2.66016 1.46466 2.66016 2.73896C2.66016 4.01326 3.7345 5.04628 5.05977 5.04628Z" fill="#738A9C"/>
+                                <path d="M6.61297 5.71129H3.50668C2.71745 5.6809 1.94777 5.95204 1.36576 6.4655C0.783742 6.97896 0.436687 7.69301 0.400391 8.4517V12.3719C0.412732 12.8144 0.569287 13.242 0.847961 13.5944C1.12663 13.9467 1.51335 14.2061 1.95354 14.3357V19.6821C1.92782 20.106 2.07614 20.5226 2.3666 20.8424C2.65705 21.1622 3.06643 21.3596 3.50668 21.3921H6.61297C7.05323 21.3596 7.46261 21.1622 7.75306 20.8424C8.04352 20.5226 8.19184 20.106 8.16612 19.6821V14.3357C8.60631 14.2061 8.99302 13.9467 9.2717 13.5944C9.55037 13.242 9.70693 12.8144 9.71927 12.3719V8.4517C9.68297 7.69301 9.33592 6.97896 8.7539 6.4655C8.17189 5.95204 7.40221 5.6809 6.61297 5.71129Z" fill="#738A9C"/>
+                            </svg>
+                        </div>
+                        <h6 class="h6__title">KK Member</h6>
+                        <p class="ticketsPrice"><span>£45.00</span>£41.50</p>
+                    </div>
+
+                    <div class="saleInfo__content people" data-people="2">
+                        <div class="people__svg">
+                            <svg class="peopleOne" width="10" height="21" viewBox="0 0 10 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.65938 4.63417C5.98464 4.63417 7.05899 3.60115 7.05899 2.32685C7.05899 1.05255 5.98464 0.0195312 4.65938 0.0195312C3.33411 0.0195312 2.25977 1.05255 2.25977 2.32685C2.25977 3.60115 3.33411 4.63417 4.65938 4.63417Z" fill="#171C22"/>
+                                <path d="M6.21258 5.29918H3.10629C2.31706 5.26879 1.54738 5.53993 0.965365 6.05339C0.383351 6.56685 0.0362962 7.2809 0 8.03959V11.9598C0.012341 12.4023 0.168896 12.8299 0.44757 13.1823C0.726243 13.5346 1.11296 13.7939 1.55315 13.9236V19.27C1.52743 19.6939 1.67575 20.1105 1.9662 20.4303C2.25666 20.7501 2.66604 20.9474 3.10629 20.98H6.21258C6.65284 20.9474 7.06222 20.7501 7.35267 20.4303C7.64313 20.1105 7.79145 19.6939 7.76573 19.27V13.9236C8.20591 13.7939 8.59263 13.5346 8.87131 13.1823C9.14998 12.8299 9.30654 12.4023 9.31888 11.9598V8.03959C9.28258 7.2809 8.93552 6.56685 8.35351 6.05339C7.7715 5.53993 7.00182 5.26879 6.21258 5.29918V5.29918Z" fill="#171C22"/>
+                            </svg>
+                            <svg class="peopleTwo" width="10" height="22" viewBox="0 0 10 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.05977 5.04628C6.38504 5.04628 7.45938 4.01326 7.45938 2.73896C7.45938 1.46466 6.38504 0.431641 5.05977 0.431641C3.7345 0.431641 2.66016 1.46466 2.66016 2.73896C2.66016 4.01326 3.7345 5.04628 5.05977 5.04628Z" fill="#738A9C"/>
+                                <path d="M6.61297 5.71129H3.50668C2.71745 5.6809 1.94777 5.95204 1.36576 6.4655C0.783742 6.97896 0.436687 7.69301 0.400391 8.4517V12.3719C0.412732 12.8144 0.569287 13.242 0.847961 13.5944C1.12663 13.9467 1.51335 14.2061 1.95354 14.3357V19.6821C1.92782 20.106 2.07614 20.5226 2.3666 20.8424C2.65705 21.1622 3.06643 21.3596 3.50668 21.3921H6.61297C7.05323 21.3596 7.46261 21.1622 7.75306 20.8424C8.04352 20.5226 8.19184 20.106 8.16612 19.6821V14.3357C8.60631 14.2061 8.99302 13.9467 9.2717 13.5944C9.55037 13.242 9.70693 12.8144 9.71927 12.3719V8.4517C9.68297 7.69301 9.33592 6.97896 8.7539 6.4655C8.17189 5.95204 7.40221 5.6809 6.61297 5.71129Z" fill="#738A9C"/>
+                            </svg>
+                        </div>
+                        <h6 class="h6__title">KK Member + Guest</h6>
+                        <p class="ticketsPrice"><span>from £145.00</span>£127.00</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+                <div class="event__content hidden" data-show="0">
+                    <div class="eventInfo__title">
+                        <svg width="25" height="27" viewBox="0 0 25 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24.8918 19.4899C23.8643 21.4245 22.3722 23.0734 20.5495 24.2885C18.7268 25.5035 16.6308 26.2464 14.4498 26.4506C12.2688 26.6547 10.0713 26.3136 8.05479 25.458C6.03831 24.6023 4.26608 23.2589 2.89747 21.5486C1.52886 19.8383 0.606765 17.8146 0.214101 15.6596C-0.178563 13.5045 -0.0294882 11.2857 0.647923 9.20253C1.32533 7.11939 2.50984 5.23726 4.09495 3.72537C5.68005 2.21348 7.61605 1.11923 9.72887 0.541006C9.93344 0.472165 10.1554 0.475498 10.3578 0.550451C10.5603 0.625405 10.7309 0.767451 10.8413 0.952927C10.9517 1.1384 10.9952 1.35611 10.9646 1.56977C10.934 1.78343 10.8311 1.98015 10.673 2.12716C9.21141 3.57306 8.21185 5.42024 7.80094 7.4347C7.39003 9.44916 7.58627 11.5403 8.3648 13.4431C9.14332 15.3459 10.4691 16.9749 12.1742 18.1236C13.8793 19.2723 15.887 19.8891 17.9429 19.8959C19.9321 19.9039 21.8806 19.3331 23.5511 18.2531C23.7267 18.1419 23.9342 18.0919 24.1412 18.1107C24.3482 18.1294 24.5433 18.216 24.696 18.357C24.8488 18.4979 24.9508 18.6854 24.9862 18.8902C25.0216 19.0951 24.9884 19.3058 24.8918 19.4899Z" fill="#738A9C"/>
+                        </svg>
+
+                        <h1 class="h1__event">THE NIGHT</h1></div>
+
+                    <img class="nightImg__mobile" src="img/Flyer.png" alt="">
+
+                    <p>Want to live your wildest fantasies? Step this way and let us lead you into a world of pure, sensual indulgence. No fruit is forbidden in the Killing Kittens garden. Here is a place where you can truly be yourself. </p>
+
+                    <p>This is an immersive event designed to entertain you from the moment you arrive. </p>
+
+                    <p>Let your senses lead you through our exclusive City of London venue, where kreatures of the night are hiding around every corner and there are endless delights to be discovered. What...or who...will you find...?</p>
+
+                    <p>When the clock strikes eleven and the masks come off, our famous playground opens up for your pleasure. Our Kurious Playspace is a world of exquisite sensation and delicious fantasy, fully equipped with everything naughty you could possibly need for a night of erotic exploration. This is the playground of your wildest dreams.</p>
+
+                    <p>We promise, you will never want to leave.</p>
+                    <div class="show__btn" data-show="0"><svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.6287 1.12451C15.7272 1.21899 15.8054 1.33123 15.8587 1.4548C15.912 1.57837 15.9395 1.71084 15.9395 1.84462C15.9395 1.97841 15.912 2.11088 15.8587 2.23445C15.8054 2.35802 15.7272 2.47026 15.6287 2.56474L8.59646 9.32649C8.51817 9.40193 8.42518 9.46177 8.32281 9.5026C8.22043 9.54344 8.11069 9.56445 7.99986 9.56445C7.88903 9.56445 7.77929 9.54344 7.67692 9.5026C7.57455 9.46177 7.48155 9.40193 7.40327 9.32649L0.371037 2.56474C-0.0436182 2.16603 -0.0436182 1.52322 0.371037 1.12451C0.785694 0.725801 1.45422 0.725801 1.86888 1.12451L8.00409 7.01562L14.1393 1.11637C14.5455 0.725802 15.2225 0.725801 15.6287 1.12451Z" fill="#1D192E"/>
+                    </svg>
+                    </div>
+                </div>
+
+                <div class="event__content">
+                    <div class="eventInfo__title">
+                        <svg width="25" height="22" viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.46525 16.8812V21.9859H3.66248L3.95647 18.4605C4.4733 12.2559 5.58222 10.7785 5.77748 10.0206C6.22864 10.6025 9.29759 13.2526 10.0133 15.847C11.0118 19.4618 14.4394 21.9859 18.2789 21.9859H23.4887C24.3219 21.9859 25 21.3079 25 20.4746C25 20.0383 24.8119 19.6242 24.4836 19.3374L19.1407 14.6618C18.5435 15.5573 17.4983 16.0931 16.2917 16.0931C16.2888 16.0931 16.2853 16.0931 16.2824 16.0931C15.1509 16.048 14.1474 15.43 13.5974 14.4394C12.3981 12.5082 8.6662 5.74985 2.93007 0.0136719C0.997142 1.9466 -0.0240802 4.65436 0.000431112 6.5947C0.00882941 7.26022 0.139979 7.93203 0.356626 8.58012C1.09187 10.7895 1.46525 14.5546 1.46525 16.8812Z" fill="#738A9C"/>
+                        </svg>
+                        <h1 class="h1__event">THE DRESSCODE</h1></div>
+
+                    <div class="dress__slider swiper">
+                        <div class="swiper-wrapper">
+                            <div class="dress__item swiper-slide">
+                                <img src="img/model1.png" alt="" class="dress__img">
+                            </div>
+
+
+                            <div class="dress__item swiper-slide">
+                                <img src="img/model2.png" alt="" class="dress__img">
+                            </div>
+
+                            <div class="dress__item swiper-slide">
+                                <img src="img/model1.png" alt="" class="dress__img">
+                            </div>
+
+                            <div class="dress__item swiper-slide">
+                                <img src="img/model3.png" alt="" class="dress__img">
+                            </div>
+
+                            <div class="dress__item swiper-slide">
+                                <img src="img/model2.png" alt="" class="dress__img">
+                            </div>
+
+                            <div class="dress__item swiper-slide">
+                                <img src="img/model2.png" alt="" class="dress__img">
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+
+                    <p>When entering the world of Killing Kittens you need to dress to impress. Think lavish animal prints or seductive black, with tempting textures like satin, leather and lace. Adorn yourself.</p>
+
+                    <p> Whether in a gorgeous dress or a sleek suit, wear something that makes you feel seductive. And if you need a little inspiration, check out our Kreatures of the Night
+                        <a class="pinterestBoard" href="#">Pinterest board here</a>.
+                    </p>
+                </div>
+
+                <div class="event__content hidden" data-show="1">
+                    <div class="eventInfo__title">
+                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24.4806 18.0933L15.6493 1.85914C14.2304 -0.529584 10.7715 -0.532758 9.35073 1.85914L0.519868 18.0933C-0.930621 20.5342 0.825483 23.6251 3.6684 23.6251H21.3313C24.1718 23.6251 25.9311 20.5367 24.4806 18.0933ZM12.5 20.6954C11.6925 20.6954 11.0352 20.0381 11.0352 19.2306C11.0352 18.4231 11.6925 17.7657 12.5 17.7657C13.3075 17.7657 13.9648 18.4231 13.9648 19.2306C13.9648 20.0381 13.3075 20.6954 12.5 20.6954ZM13.9648 14.836C13.9648 15.6436 13.3075 16.3009 12.5 16.3009C11.6925 16.3009 11.0352 15.6436 11.0352 14.836V7.51183C11.0352 6.70431 11.6925 6.04698 12.5 6.04698C13.3075 6.04698 13.9648 6.70431 13.9648 7.51183V14.836Z" fill="#738A9C"/>
+                        </svg>
+
+                        <h1 class="h1__event">THE RULES</h1>
+                    </div>
+
+                    <p>
+                        We are determined to give safer spaces to women, transgender and non-binary people to access exploration, to discover pleasure and to find joy in their bodies, identities and sexualities.
+
+                        The following explains how this ethos is put into practise at our parties, as well as outlining some other basic rules.
+
+                    <ol class="rulesList">
+                        <li class="ruleItem main__text">Only Killing Kittens Members can buy tickets, and have the ability to bring one guest with them.</li>
+                        <li class="ruleItem main__text">Yes to consent, no to creeps. Everyone, regardless of gender identity, must practise consent at our parties. You can read the full guidelines here.</li>
+                        <li class="ruleItem main__text">Men, you are welcome at our parties, but consider how your presence impacts a space, and be mindful of how you approach and interact with others. Any kind of toxic masculinity will not be tolerated at our events.</li>
+                        <li class="ruleItem main__text">Be respectful and considerate. Do not make any assumptions about the gender or physiology of those around you. Feel free to introduce yourself with your pronouns, if you feel comfortable doing so.</li>
+                        <li class="ruleItem main__text">No phones or unauthorised photography.</li>
+                        <li class="ruleItem main__text">No drugs. Anyone found with or using illegal drugs will be ejected from the party and reported to the police. Our door team will be carrying out random bag checks on arrival.</li>
+                        <li class="ruleItem main__text">Men cannot enter the playrooms solo or linger alone. They must wait to be invited.</li>
+                        <li class="ruleItem main__text">Killing Kittens Members are responsible for their Guests. Members may not leave their Guests behind at the party.</li>
+                        <li class="ruleItem main__text">In iconic KK form, all party-attendees must wear their masks until the play spaces open…</li>
+                        <li class="ruleItem main__text">Any problems, questions, or concerns, please speak to a member of staff immediately. Our welcoming hosts are easily distinguished by their red armbands and are here to offer judgement-free help, advice, or to have a chat.</li>
+
+                </ol></p>
+
+                    <div class="show__btn" data-show="1"><svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.6287 1.12451C15.7272 1.21899 15.8054 1.33123 15.8587 1.4548C15.912 1.57837 15.9395 1.71084 15.9395 1.84462C15.9395 1.97841 15.912 2.11088 15.8587 2.23445C15.8054 2.35802 15.7272 2.47026 15.6287 2.56474L8.59646 9.32649C8.51817 9.40193 8.42518 9.46177 8.32281 9.5026C8.22043 9.54344 8.11069 9.56445 7.99986 9.56445C7.88903 9.56445 7.77929 9.54344 7.67692 9.5026C7.57455 9.46177 7.48155 9.40193 7.40327 9.32649L0.371037 2.56474C-0.0436182 2.16603 -0.0436182 1.52322 0.371037 1.12451C0.785694 0.725801 1.45422 0.725801 1.86888 1.12451L8.00409 7.01562L14.1393 1.11637C14.5455 0.725802 15.2225 0.725801 15.6287 1.12451Z" fill="#1D192E"/>
+                    </svg>
+                    </div>
+                </div>
+
+
+                <div class="event__content">
+                    <div class="eventInfo__title">
+                        <svg width="25" height="19" viewBox="0 0 25 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.68212 7.45745C5.4042 7.45745 5.13749 7.49982 4.87203 7.53846C4.95803 7.24932 5.04651 6.95519 5.18859 6.69098C5.33067 6.30712 5.55251 5.97436 5.7731 5.63911C5.95755 5.27644 6.28283 5.03092 6.52212 4.72059C6.77263 4.41899 7.11411 4.21834 7.38455 3.96783C7.65001 3.70611 7.99773 3.57525 8.27441 3.3908C8.56355 3.22504 8.8153 3.04184 9.08449 2.9546L9.75624 2.67792L10.347 2.4324L9.74254 0.0170898L8.9985 0.196555C8.76046 0.256377 8.47007 0.32617 8.13981 0.409671C7.80206 0.471986 7.44188 0.642728 7.04058 0.798514C6.64426 0.975488 6.18562 1.09513 5.75939 1.37929C5.33067 1.65098 4.83589 1.8778 4.39969 2.24172C3.9772 2.61685 3.46746 2.94214 3.09108 3.41947C2.67981 3.86564 2.27352 4.33424 1.95821 4.86766C1.59304 5.37614 1.34503 5.93448 1.08331 6.48659C0.846514 7.0387 0.655832 7.60327 0.500046 8.15163C0.204675 9.25086 0.0725681 10.2953 0.0214702 11.1888C-0.0209037 12.0837 0.00402209 12.8277 0.0563663 13.3661C0.0750606 13.6204 0.109957 13.8671 0.134883 14.0379L0.16604 14.2472L0.198443 14.2398C0.42011 15.2752 0.930394 16.2268 1.67027 16.9843C2.41014 17.7419 3.34937 18.2745 4.3793 18.5206C5.40923 18.7666 6.48778 18.7161 7.49018 18.3748C8.49258 18.0334 9.37788 17.4153 10.0436 16.5919C10.7094 15.7684 11.1285 14.7733 11.2523 13.7217C11.3762 12.67 11.1997 11.6048 10.7435 10.6492C10.2872 9.69365 9.56972 8.88678 8.67403 8.32194C7.77834 7.7571 6.74104 7.45738 5.68212 7.45745ZM19.3913 7.45745C19.1134 7.45745 18.8467 7.49982 18.5812 7.53846C18.6672 7.24932 18.7557 6.95519 18.8978 6.69098C19.0399 6.30712 19.2617 5.97436 19.4823 5.63911C19.6667 5.27644 19.992 5.03092 20.2313 4.72059C20.4818 4.41899 20.8233 4.21834 21.0937 3.96783C21.3592 3.70611 21.7069 3.57525 21.9836 3.3908C22.2727 3.22504 22.5245 3.04184 22.7937 2.9546L23.4654 2.67792L24.0562 2.4324L23.4517 0.0170898L22.7077 0.196555C22.4697 0.256377 22.1793 0.32617 21.849 0.409671C21.5113 0.471986 21.1511 0.642728 20.7498 0.798514C20.3547 0.976734 19.8948 1.09513 19.4686 1.38053C19.0399 1.65222 18.5451 1.87905 18.1089 2.24297C17.6864 2.6181 17.1767 2.94338 16.8003 3.41947C16.389 3.86564 15.9827 4.33424 15.6674 4.86766C15.3022 5.37614 15.0542 5.93448 14.7925 6.48659C14.5557 7.0387 14.365 7.60327 14.2092 8.15163C13.9139 9.25086 13.7818 10.2953 13.7307 11.1888C13.6883 12.0837 13.7132 12.8277 13.7656 13.3661C13.7843 13.6204 13.8192 13.8671 13.8441 14.0379L13.8752 14.2472L13.9076 14.2398C14.1293 15.2752 14.6396 16.2268 15.3795 16.9843C16.1193 17.7419 17.0586 18.2745 18.0885 18.5206C19.1184 18.7666 20.197 18.7161 21.1994 18.3748C22.2018 18.0334 23.0871 17.4153 23.7528 16.5919C24.4186 15.7684 24.8377 14.7733 24.9615 13.7217C25.0854 12.67 24.9089 11.6048 24.4527 10.6492C23.9964 9.69365 23.2789 8.88678 22.3832 8.32194C21.4875 7.7571 20.4502 7.45738 19.3913 7.45745Z" fill="#738A9C"/>
+                        </svg>
+
+                        <h1 class="h1__event">THE TALES</h1>
+                    </div>
+
+                    <div class="tales__slider swiper">
+                        <div class="swiper-wrapper">
+
+                            <div class="taleCard swiper-slide">
+                                <img class="cardDecor" src="img/skob.png" alt="">
+                                <p class="taleText">What an incredible experience. Completely out of this world. From the venue, to the characters to the incredible members - all of the details were spectacular. Can’t wait to go again.</p>
+                            </div>
+
+                            <div class="taleCard swiper-slide">
+                                <img class="cardDecor" src="img/skob.png" alt="">
+                                <p class="taleText">What an incredible experience. Completely out of this world. From the venue, to the characters to the incredible members - all of the details were spectacular. Can’t wait to go again.</p>
+                            </div>
+
+                            <div class="taleCard swiper-slide">
+                                <img class="cardDecor" src="img/skob.png" alt="">
+                                <p class="taleText">What an incredible experience. Completely out of this world. From the venue, to the characters to the incredible members - all of the details were spectacular. Can’t wait to go again.</p>
+                            </div>
+
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+
+                <div class="event__content">
+                    <div class="eventInfo__title">
+                        <svg width="25" height="30" viewBox="0 0 25 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.5 0.212891L0 4.75899V14.8634C0 26.281 12.1297 29.3867 12.2518 29.4172L12.5 29.4772L12.7482 29.4172C12.8703 29.3867 25 26.281 25 14.8634V4.75899L12.5 0.212891ZM10.4167 20.503L5.51351 15.5999L6.98649 14.1269L10.4167 17.557L18.0135 9.96021L19.4865 11.4332L10.4167 20.503Z" fill="#738A9C"/>
+                        </svg>
+
+
+                        <h1 class="h1__event">Your SAFETY</h1>
+                    </div>
+                    <p>We have a range of trained staff at every event, from Mental Health First Aiders and experienced kink professionals to discreet security and exceptional management. Whether you’re a nervous newbie or long-time member, our team of welcoming hosts, easily distinguished by their red LED armbands, are here to help, offer advice or just have a chat.</p>
+                </div>
+
+                <div class="event__content">
+                    <div class="eventInfo__title">
+                    <svg width="25" height="30" viewBox="0 0 25 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.5 0.212891L0 4.75899V14.8634C0 26.281 12.1297 29.3867 12.2518 29.4172L12.5 29.4772L12.7482 29.4172C12.8703 29.3867 25 26.281 25 14.8634V4.75899L12.5 0.212891ZM10.4167 20.503L5.51351 15.5999L6.98649 14.1269L10.4167 17.557L18.0135 9.96021L19.4865 11.4332L10.4167 20.503Z" fill="#738A9C"/>
+                    </svg>
+
+
+                    <h1 class="h1__event">Entry requirements</h1>
+                </div>
+
+                    <p class="bold"> To purchase a ticket you must be a KK Member or be invited by a KK Member. Apply to become a member here.</p>
+
+                    <p>Safety, security and discretion are key to a KK event. We want you to feel secure in the knowledge that we have a network of measures in place to ensure that you can relax and enjoy your evening with us.</p>
+
+                    <p>What you’ll need for entry</p>
+
+                    <div class="safetyBlock">
+                        <svg width="50" height="51" viewBox="0 0 50 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="25" cy="25.8452" r="25" fill="#EFEBFF"/>
+                            <path d="M19.6561 30.1091C19.4357 30.2925 19.406 30.6205 19.5898 30.8411C19.7735 31.0617 20.1015 31.0919 20.3219 30.9085C20.5423 30.725 20.572 30.3971 20.3882 30.1765C20.2044 29.9558 19.8764 29.9257 19.6561 30.1091Z" fill="#1D192E"/>
+                            <path d="M33.151 16.1155C33.3712 15.9318 33.401 15.6037 33.2174 15.3828L31.223 12.983C30.6731 12.3214 29.6891 12.2309 29.0294 12.7812L11.004 27.8193C10.3443 28.3696 10.255 29.3557 10.8048 30.0173L12.7993 32.4171C12.9828 32.6379 13.3102 32.6681 13.5305 32.4843C14.63 31.5671 16.27 31.718 17.1865 32.8207C18.1029 33.9234 17.954 35.5668 16.8546 36.484C16.6343 36.6678 16.6046 36.9958 16.7882 37.2167L18.7826 39.6165C19.3325 40.2781 20.3165 40.3686 20.9762 39.8183L39.0016 24.7802C39.6613 24.2299 39.7506 23.2439 39.2007 22.5822L37.2063 20.1824C37.0227 19.9616 36.6953 19.9314 36.4751 20.1152C35.3756 21.0324 33.7356 20.8815 32.8191 19.7788C31.9027 18.6761 32.0516 17.0328 33.151 16.1155ZM32.0215 20.4442C33.1917 21.8522 35.2047 22.1518 36.7175 21.2193L38.4032 23.2476C38.5865 23.4682 38.5567 23.7968 38.3368 23.9803L24.6981 35.3586L23.7009 34.1587C23.5173 33.9379 23.1899 33.9077 22.9697 34.0915C22.7494 34.2752 22.7197 34.6033 22.9033 34.8241L23.9005 36.024L20.3114 39.0184C20.0915 39.2018 19.7635 39.1716 19.5802 38.9511L17.8945 36.9228C19.0837 35.601 19.1542 33.5633 17.9841 32.1553C16.8139 30.7473 14.8009 30.4477 13.2881 31.3802L11.6024 29.3519C11.4191 29.1313 11.4489 28.8027 11.6688 28.6192L15.2579 25.6249L16.2552 26.8248C16.4387 27.0457 16.7661 27.0758 16.9864 26.8921C17.2066 26.7083 17.2363 26.3803 17.0527 26.1594L16.0555 24.9595L29.6942 13.5812C29.9141 13.3977 30.2421 13.4279 30.4254 13.6484L32.1111 15.6767C30.9218 16.9985 30.8514 19.0362 32.0215 20.4442Z" fill="#1D192E"/>
+                            <path d="M27.6777 19.3057L20.8298 25.0434C20.6099 25.2276 20.5802 25.5565 20.7635 25.7779C20.9467 25.9994 21.2735 26.0296 21.4934 25.8454L28.3414 20.1077C28.5612 19.9235 28.5909 19.5946 28.4077 19.3731C28.2245 19.1517 27.8976 19.1215 27.6777 19.3057Z" fill="#1D192E"/>
+                            <path d="M29.6758 21.6954L22.8278 27.433C22.6079 27.6173 22.5783 27.9462 22.7615 28.1676C22.9447 28.389 23.2716 28.4193 23.4915 28.235L30.3394 22.4974C30.5593 22.3132 30.589 21.9842 30.4057 21.7628C30.2225 21.5414 29.8956 21.5112 29.6758 21.6954Z" fill="#1D192E"/>
+                            <path d="M31.6817 24.0865L24.8337 29.8241C24.6138 30.0084 24.5841 30.3373 24.7674 30.5587C24.9506 30.7801 25.2774 30.8103 25.4973 30.6261L32.3453 24.8885C32.5651 24.7042 32.5948 24.3753 32.4116 24.1539C32.2284 23.9325 31.9015 23.9023 31.6817 24.0865Z" fill="#1D192E"/>
+                            <path d="M17.6526 27.7208C17.4319 27.9041 17.4022 28.2315 17.5863 28.4519L18.2529 29.2504C18.437 29.4708 18.7651 29.501 18.9859 29.3177C19.2066 29.1344 19.2363 28.807 19.0522 28.5866L18.3856 27.7882C18.2015 27.5677 17.8733 27.5375 17.6526 27.7208Z" fill="#1D192E"/>
+                            <path d="M20.9944 31.6959C20.7737 31.8792 20.744 32.2066 20.928 32.427L21.5947 33.2255C21.7787 33.4459 22.1069 33.4761 22.3277 33.2928C22.5484 33.1095 22.5781 32.7821 22.394 32.5617L21.7274 31.7633C21.5433 31.5428 21.2151 31.5126 20.9944 31.6959Z" fill="#1D192E"/>
+                        </svg>
+                        <h3 class="safety__title">PERSONALISED E-TICKET</h3>
+                    </div>
+
+                    <div class="safetyBlock">
+                        <svg width="50" height="51" viewBox="0 0 50 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="25" cy="25.8452" r="25" fill="#EFEBFF"/>
+                            <path d="M34.0048 20.2669C33.9691 20.2669 33.9317 20.2616 33.896 20.2527L30.8577 19.4583C30.6292 19.3976 30.4917 19.1638 30.5525 18.9353L32.0895 13.0533C32.3679 11.9876 33.4622 11.3467 34.5297 11.6252C35.5954 11.9036 36.2363 12.9979 35.9578 14.0654L34.4208 19.9473C34.3922 20.058 34.3208 20.1509 34.2226 20.208C34.1548 20.2473 34.0816 20.2669 34.0048 20.2669ZM31.4896 18.7371L33.6996 19.3154L35.1295 13.8494C35.2884 13.2407 34.9224 12.6141 34.3137 12.4552C33.705 12.2964 33.0784 12.6623 32.9195 13.271L31.4896 18.7371Z" fill="#1D192E"/>
+                            <path d="M31.161 31.1669C31.1253 31.1669 31.0879 31.1615 31.0522 31.1526L28.0121 30.3582C27.7836 30.2975 27.6461 30.0637 27.705 29.8352L30.5541 18.9353C30.5826 18.8246 30.654 18.7318 30.7522 18.6747C30.8504 18.6175 30.9664 18.6015 31.0771 18.63L34.1172 19.4244C34.3457 19.4851 34.4831 19.7189 34.4242 19.9474L31.5752 30.8455C31.5466 30.9562 31.4752 31.0491 31.3771 31.1062C31.311 31.1454 31.236 31.1669 31.161 31.1669ZM28.644 29.637L30.854 30.2154L33.4871 20.1437L31.2771 19.5654L28.644 29.637Z" fill="#1D192E"/>
+                            <path d="M30.6866 32.9643C30.6509 32.9643 30.6134 32.959 30.5777 32.9501L27.5394 32.1575C27.311 32.0968 27.1735 31.863 27.2324 31.6345L27.7037 29.8333C27.7323 29.7226 27.8037 29.6297 27.9018 29.5726C28 29.5155 28.1161 29.4994 28.2267 29.528L31.2668 30.3223C31.4953 30.383 31.6328 30.6169 31.5739 30.8453L31.1026 32.6466C31.074 32.7572 31.0026 32.8501 30.9044 32.9072C30.8366 32.9447 30.7616 32.9643 30.6866 32.9643ZM28.1696 31.4363L30.3796 32.0146L30.6331 31.0417L28.4231 30.4634L28.1696 31.4363Z" fill="#1D192E"/>
+                            <path d="M27.8997 37.4108C27.864 37.4108 27.8265 37.4054 27.7908 37.3965C27.623 37.3519 27.498 37.2109 27.4748 37.0395L26.9803 33.3211C26.9643 33.1998 26.9999 33.0766 27.0803 32.9838L28.1978 31.6931C28.3049 31.57 28.4727 31.5182 28.6298 31.5593L29.9186 31.8967C30.0757 31.9377 30.1971 32.0645 30.2292 32.2251L30.572 33.896C30.5969 34.0156 30.5684 34.1405 30.4952 34.2387L28.2424 37.2395C28.1603 37.35 28.0335 37.4107 27.8997 37.4108ZM27.855 33.3996L28.1871 35.8881L29.6937 33.8798L29.4438 32.6588L28.6708 32.4571L27.855 33.3996Z" fill="#1D192E"/>
+                            <path d="M28.7165 34.2601C28.9304 34.2601 29.1038 34.0867 29.1038 33.8727C29.1038 33.6588 28.9304 33.4854 28.7165 33.4854C28.5025 33.4854 28.3291 33.6588 28.3291 33.8727C28.3291 34.0867 28.5025 34.2601 28.7165 34.2601Z" fill="#1D192E"/>
+                            <path d="M35.3465 22.2525C35.3107 22.2525 35.2733 22.2471 35.2376 22.2382C35.0091 22.1775 34.8716 21.9437 34.9323 21.7152L36.6836 15.0175L35.359 14.664C35.1305 14.6033 34.9948 14.3677 35.0556 14.1392C35.1163 13.9107 35.3519 13.775 35.5804 13.8358L37.3155 14.2999C37.544 14.3606 37.6797 14.5944 37.619 14.8229L35.7606 21.9329C35.7106 22.1257 35.5375 22.2525 35.3465 22.2525Z" fill="#1D192E"/>
+                            <path d="M13.2423 38.9425C13.087 38.9425 12.9317 38.9318 12.7764 38.9121C12.5426 38.8818 12.3766 38.6658 12.4069 38.4319C12.4373 38.1981 12.6532 38.0321 12.8871 38.0624C13.4887 38.1409 14.1046 38.0106 14.6472 37.7286C13.9974 36.9199 13.86 35.7203 14.3759 34.801C14.7758 34.0905 15.6808 33.5782 16.4448 33.9905C16.7893 34.1761 17.0214 34.5046 17.1142 34.9384C17.1838 35.2669 17.1714 35.6471 17.0785 36.0095C16.9143 36.6449 16.5733 37.2305 16.0949 37.7142C16.7161 37.9017 17.4534 37.741 17.8997 37.2698C17.98 37.184 18.0568 37.0859 18.1389 36.9824C18.2709 36.8128 18.4084 36.6378 18.5887 36.4825C18.7726 36.3237 18.9957 36.2076 19.2188 36.1541C19.5027 36.0862 19.7758 36.1201 20.0061 36.2523C20.3899 36.47 20.5255 36.8628 20.6344 37.177C20.6469 37.2127 20.6594 37.2484 20.6719 37.2841C20.7504 37.5036 20.8593 37.6054 20.8915 37.6108C20.929 37.609 21.0343 37.5269 21.0968 37.4787C21.2289 37.3769 21.3949 37.2484 21.6144 37.1913C22.0161 37.086 22.3731 37.2645 22.6337 37.3966C22.6659 37.4126 22.6998 37.4287 22.7319 37.4448C23.7602 37.9393 25.1686 37.559 25.8095 36.6165C25.9416 36.4201 26.2093 36.3702 26.4039 36.5023C26.6003 36.6343 26.6503 36.9021 26.5182 37.0967C26.0915 37.7268 25.4239 38.1892 24.6402 38.3999C23.8566 38.6105 23.0461 38.5463 22.3606 38.216C22.3249 38.1982 22.2875 38.1803 22.2518 38.1625C22.0964 38.0857 21.9197 37.9965 21.8304 38.0196C21.7787 38.0321 21.6984 38.0964 21.6198 38.1571C21.4609 38.2802 21.2431 38.448 20.9432 38.4659C20.9254 38.4677 20.9075 38.4677 20.8915 38.4677C20.4506 38.4677 20.0703 38.1374 19.8668 37.5734C19.8525 37.5341 19.84 37.4948 19.8257 37.4556C19.7579 37.2574 19.6865 37.0539 19.5847 36.995C19.4919 36.9415 19.2974 37.0021 19.151 37.1289C19.0331 37.2306 18.9278 37.3663 18.8154 37.5091C18.7261 37.6251 18.6315 37.7429 18.5226 37.859C18.0299 38.3784 17.3266 38.6462 16.6215 38.6462C16.1752 38.6462 15.7307 38.5391 15.3398 38.3177C14.6918 38.7283 13.9635 38.9425 13.2423 38.9425ZM15.8665 34.7047C15.6023 34.7047 15.2809 34.9439 15.1239 35.2223C14.7722 35.8471 14.8883 36.6986 15.3542 37.2377C15.7826 36.8503 16.1057 36.3523 16.2503 35.7953C16.3556 35.3866 16.3181 34.8939 16.0396 34.7439C15.9861 34.7172 15.9272 34.7047 15.8665 34.7047Z" fill="#1D192E"/>
+                        </svg>
+
+                        <h3 class="safety__title">SIGN THE NDA AT THE DOOR</h3>
+                    </div>
+
+                    <div class="safetyBlock last">
+                        <svg width="50" height="51" viewBox="0 0 50 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="25" cy="25.8452" r="25" fill="#EFEBFF"/>
+                            <path d="M24.8786 25.4243C26.4565 25.4243 27.8226 24.8584 28.9392 23.7418C30.0554 22.6255 30.6215 21.2595 30.6215 19.6815C30.6215 18.1039 30.0555 16.7378 28.939 15.6211C27.8224 14.5049 26.4563 13.939 24.8786 13.939C23.3005 13.939 21.9346 14.5049 20.8182 15.6213C19.7018 16.7376 19.1357 18.1038 19.1357 19.6815C19.1357 21.2595 19.7018 22.6257 20.8182 23.742C21.935 24.8582 23.3011 25.4243 24.8786 25.4243ZM21.8063 16.6092C22.663 15.7526 23.6678 15.3362 24.8786 15.3362C26.0892 15.3362 27.0943 15.7526 27.951 16.6092C28.8077 17.466 29.2242 18.471 29.2242 19.6815C29.2242 20.8922 28.8077 21.8971 27.951 22.7539C27.0943 23.6107 26.0892 24.0271 24.8786 24.0271C23.6682 24.0271 22.6633 23.6105 21.8063 22.7539C20.9496 21.8973 20.533 20.8922 20.533 19.6815C20.533 18.471 20.9496 17.466 21.8063 16.6092Z" fill="#1D192E"/>
+                            <path d="M34.9273 32.2741C34.8951 31.8095 34.8299 31.3027 34.7341 30.7675C34.6373 30.2283 34.5127 29.7186 34.3635 29.2527C34.2093 28.7712 33.9999 28.2957 33.7407 27.84C33.472 27.3671 33.1562 26.9552 32.8018 26.6163C32.4313 26.2618 31.9776 25.9767 31.453 25.7688C30.9302 25.562 30.3508 25.4572 29.731 25.4572C29.4876 25.4572 29.2523 25.5571 28.7977 25.853C28.5179 26.0355 28.1906 26.2465 27.8254 26.4799C27.513 26.6789 27.0899 26.8654 26.5673 27.0342C26.0574 27.1992 25.5397 27.2829 25.0285 27.2829C24.5177 27.2829 24 27.1992 23.4897 27.0342C22.9677 26.8656 22.5444 26.6791 22.2326 26.4801C21.8708 26.2489 21.5433 26.0379 21.2594 25.8529C20.8051 25.5569 20.5697 25.457 20.3263 25.457C19.7064 25.457 19.1272 25.562 18.6046 25.769C18.0803 25.9766 17.6265 26.2616 17.2555 26.6165C16.9012 26.9556 16.5854 27.3673 16.3169 27.84C16.058 28.2957 15.8485 28.771 15.6942 29.2529C15.5452 29.7188 15.4206 30.2283 15.3239 30.7675C15.2278 31.3019 15.1629 31.8089 15.1307 32.2746C15.099 32.7299 15.083 33.2038 15.083 33.6826C15.083 34.9272 15.4787 35.9348 16.2589 36.6779C17.0294 37.4112 18.0489 37.783 19.2889 37.783H30.7696C32.0093 37.783 33.0287 37.4112 33.7994 36.6779C34.5798 35.9353 34.9755 34.9274 34.9755 33.6824C34.9753 33.202 34.9591 32.7281 34.9273 32.2741ZM32.836 35.6656C32.3269 36.1502 31.6509 36.3858 30.7694 36.3858H19.2889C18.4072 36.3858 17.7312 36.1502 17.2223 35.6658C16.7229 35.1904 16.4803 34.5416 16.4803 33.6826C16.4803 33.2358 16.495 32.7947 16.5245 32.3712C16.5532 31.9557 16.612 31.4993 16.6991 31.0143C16.7851 30.5354 16.8946 30.0859 17.0249 29.679C17.1499 29.2888 17.3203 28.9024 17.5317 28.5302C17.7334 28.1755 17.9655 27.8711 18.2217 27.6259C18.4612 27.3965 18.7632 27.2088 19.119 27.068C19.4481 26.9378 19.8179 26.8665 20.2194 26.8557C20.2683 26.8817 20.3555 26.9314 20.4966 27.0234C20.7839 27.2106 21.1149 27.4242 21.4809 27.6579C21.8935 27.921 22.425 28.1586 23.0601 28.3636C23.7093 28.5735 24.3715 28.6801 25.0287 28.6801C25.6859 28.6801 26.3483 28.5735 26.9971 28.3638C27.6327 28.1584 28.1641 27.921 28.5772 27.6576C28.9517 27.4182 29.2735 27.2108 29.5608 27.0234C29.7019 26.9316 29.7891 26.8817 29.838 26.8557C30.2397 26.8665 30.6095 26.9378 30.9387 27.068C31.2944 27.2088 31.5963 27.3967 31.8359 27.6259C32.092 27.871 32.3242 28.1753 32.5259 28.5304C32.7374 28.9024 32.9081 29.2889 33.0329 29.6788C33.1633 30.0862 33.273 30.5356 33.3588 31.0142C33.4458 31.5 33.5047 31.9566 33.5335 32.3714V32.3718C33.5631 32.7936 33.578 33.2345 33.5782 33.6826C33.578 34.5417 33.3354 35.1904 32.836 35.6656Z" fill="#1D192E"/>
+                        </svg>
+
+                        <h3 class="safety__title">SIGN THE NDA AT THE DOOR</h3>
+                    </div>
+
+                    <p>Entry is only possible with your personalised e-ticket. Think of it as your passport - if there isn't a photographic match, there will be no entry.</p>
+
+                    <p>Entry to all KK events is subject to signing an NDA, showing a photo ID, and is always at the management’s discretion.</p>
+                </div>
+
+        </div>
+        <div class="sellingTickets">
+            <a href="parties.html" class="btn__toParties"><svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.9483 10.0042L11.4302 2.52195C11.6363 2.31642 11.7496 2.04163 11.7496 1.74862C11.7496 1.45545 11.6363 1.18081 11.4302 0.974959L10.7746 0.319675C10.5689 0.113496 10.294 0 10.001 0C9.70797 0 9.43334 0.113496 9.22748 0.319675L0.319029 9.22797C0.112362 9.43447 -0.000808652 9.71041 4.35631e-06 10.0037C-0.000808652 10.2984 0.112199 10.574 0.319029 10.7807L9.21919 19.6803C9.42505 19.8865 9.69968 20 9.99285 20C10.2859 20 10.5605 19.8865 10.7665 19.6803L11.422 19.025C11.8485 18.5985 11.8485 17.9042 11.422 17.4779L3.9483 10.0042Z" fill="black"/>
+            </svg>
+                Back to all parties</a>
+            <a href="#" class="main__btn black buyTickets">Buy Tickets on X</a>
+            <div class="saleInfo__content people" data-people="1">
+                <div class="people__svg">
+                    <svg class="peopleOne" width="10" height="21" viewBox="0 0 10 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.65938 4.63417C5.98464 4.63417 7.05899 3.60115 7.05899 2.32685C7.05899 1.05255 5.98464 0.0195312 4.65938 0.0195312C3.33411 0.0195312 2.25977 1.05255 2.25977 2.32685C2.25977 3.60115 3.33411 4.63417 4.65938 4.63417Z" fill="#171C22"/>
+                        <path d="M6.21258 5.29918H3.10629C2.31706 5.26879 1.54738 5.53993 0.965365 6.05339C0.383351 6.56685 0.0362962 7.2809 0 8.03959V11.9598C0.012341 12.4023 0.168896 12.8299 0.44757 13.1823C0.726243 13.5346 1.11296 13.7939 1.55315 13.9236V19.27C1.52743 19.6939 1.67575 20.1105 1.9662 20.4303C2.25666 20.7501 2.66604 20.9474 3.10629 20.98H6.21258C6.65284 20.9474 7.06222 20.7501 7.35267 20.4303C7.64313 20.1105 7.79145 19.6939 7.76573 19.27V13.9236C8.20591 13.7939 8.59263 13.5346 8.87131 13.1823C9.14998 12.8299 9.30654 12.4023 9.31888 11.9598V8.03959C9.28258 7.2809 8.93552 6.56685 8.35351 6.05339C7.7715 5.53993 7.00182 5.26879 6.21258 5.29918V5.29918Z" fill="#171C22"/>
+                    </svg>
+                    <svg class="peopleTwo" width="10" height="22" viewBox="0 0 10 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.05977 5.04628C6.38504 5.04628 7.45938 4.01326 7.45938 2.73896C7.45938 1.46466 6.38504 0.431641 5.05977 0.431641C3.7345 0.431641 2.66016 1.46466 2.66016 2.73896C2.66016 4.01326 3.7345 5.04628 5.05977 5.04628Z" fill="#738A9C"/>
+                        <path d="M6.61297 5.71129H3.50668C2.71745 5.6809 1.94777 5.95204 1.36576 6.4655C0.783742 6.97896 0.436687 7.69301 0.400391 8.4517V12.3719C0.412732 12.8144 0.569287 13.242 0.847961 13.5944C1.12663 13.9467 1.51335 14.2061 1.95354 14.3357V19.6821C1.92782 20.106 2.07614 20.5226 2.3666 20.8424C2.65705 21.1622 3.06643 21.3596 3.50668 21.3921H6.61297C7.05323 21.3596 7.46261 21.1622 7.75306 20.8424C8.04352 20.5226 8.19184 20.106 8.16612 19.6821V14.3357C8.60631 14.2061 8.99302 13.9467 9.2717 13.5944C9.55037 13.242 9.70693 12.8144 9.71927 12.3719V8.4517C9.68297 7.69301 9.33592 6.97896 8.7539 6.4655C8.17189 5.95204 7.40221 5.6809 6.61297 5.71129Z" fill="#738A9C"/>
+                    </svg>
+                </div>
+                <h6 class="h6__title">KK Member</h6>
+                <p class="ticketsPrice"><span>£45.00</span>£41.50</p>
+            </div>
+
+            <div class="saleInfo__content people" data-people="2">
+                <div class="people__svg">
+                    <svg class="peopleOne" width="10" height="21" viewBox="0 0 10 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.65938 4.63417C5.98464 4.63417 7.05899 3.60115 7.05899 2.32685C7.05899 1.05255 5.98464 0.0195312 4.65938 0.0195312C3.33411 0.0195312 2.25977 1.05255 2.25977 2.32685C2.25977 3.60115 3.33411 4.63417 4.65938 4.63417Z" fill="#171C22"/>
+                        <path d="M6.21258 5.29918H3.10629C2.31706 5.26879 1.54738 5.53993 0.965365 6.05339C0.383351 6.56685 0.0362962 7.2809 0 8.03959V11.9598C0.012341 12.4023 0.168896 12.8299 0.44757 13.1823C0.726243 13.5346 1.11296 13.7939 1.55315 13.9236V19.27C1.52743 19.6939 1.67575 20.1105 1.9662 20.4303C2.25666 20.7501 2.66604 20.9474 3.10629 20.98H6.21258C6.65284 20.9474 7.06222 20.7501 7.35267 20.4303C7.64313 20.1105 7.79145 19.6939 7.76573 19.27V13.9236C8.20591 13.7939 8.59263 13.5346 8.87131 13.1823C9.14998 12.8299 9.30654 12.4023 9.31888 11.9598V8.03959C9.28258 7.2809 8.93552 6.56685 8.35351 6.05339C7.7715 5.53993 7.00182 5.26879 6.21258 5.29918V5.29918Z" fill="#171C22"/>
+                    </svg>
+                    <svg class="peopleTwo" width="10" height="22" viewBox="0 0 10 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.05977 5.04628C6.38504 5.04628 7.45938 4.01326 7.45938 2.73896C7.45938 1.46466 6.38504 0.431641 5.05977 0.431641C3.7345 0.431641 2.66016 1.46466 2.66016 2.73896C2.66016 4.01326 3.7345 5.04628 5.05977 5.04628Z" fill="#738A9C"/>
+                        <path d="M6.61297 5.71129H3.50668C2.71745 5.6809 1.94777 5.95204 1.36576 6.4655C0.783742 6.97896 0.436687 7.69301 0.400391 8.4517V12.3719C0.412732 12.8144 0.569287 13.242 0.847961 13.5944C1.12663 13.9467 1.51335 14.2061 1.95354 14.3357V19.6821C1.92782 20.106 2.07614 20.5226 2.3666 20.8424C2.65705 21.1622 3.06643 21.3596 3.50668 21.3921H6.61297C7.05323 21.3596 7.46261 21.1622 7.75306 20.8424C8.04352 20.5226 8.19184 20.106 8.16612 19.6821V14.3357C8.60631 14.2061 8.99302 13.9467 9.2717 13.5944C9.55037 13.242 9.70693 12.8144 9.71927 12.3719V8.4517C9.68297 7.69301 9.33592 6.97896 8.7539 6.4655C8.17189 5.95204 7.40221 5.6809 6.61297 5.71129Z" fill="#738A9C"/>
+                    </svg>
+                </div>
+                <h6 class="h6__title">KK Member + Guest</h6>
+                <p class="ticketsPrice"><span>from £145.00</span>£127.00</p>
+            </div>
+
+            <div class="mob-line"></div>
+        </div>
+    </div>
+
+</main>
+
+<footer class="footer">
+    <img src="img/Logo.svg" alt="" class="footer__logo">
+    <svg class="footer__logo mobile" width="36" height="35" viewBox="0 0 36 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.69945 2.5625V2.84534C6.62246 2.84534 6.03376 2.97554 6.03376 4.56293V24.0362C6.03376 25.5165 6.4751 25.8846 7.5297 25.8846V26.1681H0.5V25.8846C1.5286 25.8846 1.8717 25.5165 1.8717 24.0362V4.56293C1.8717 3.21413 1.55243 2.84534 0.5 2.84534V2.5625H7.69945ZM17.266 25.2607C16.9662 25.0497 16.6505 24.7681 16.3226 24.3859C16.3226 24.3859 16.0041 24.0184 12.9132 20.353C12.5368 19.9065 12.1202 19.412 11.6579 18.8634L11.6565 18.8617L11.6506 18.8547C11.1824 18.2991 10.6675 17.688 10.1005 17.0153C11.1442 15.907 12.076 15.0014 12.9132 14.2619C15.0737 12.3512 16.5949 11.5514 17.7326 11.2724C18.1089 11.1807 18.4441 11.1442 18.746 11.1442V10.8613H18.741H11.5408H10.6646V11.1442C13.6283 11.1871 11.7416 14.7968 10.8604 15.6447L7.08691 19.4069C7.08691 19.4069 8.16607 20.6679 9.56161 22.4502C10.9391 24.1909 11.7026 25.1312 12.5029 25.6301C13.2123 26.0721 13.9505 26.1683 15.1705 26.1683H18.5712H19.2863V25.8854L19.2695 25.8848C18.7993 25.8689 18.0968 25.8451 17.266 25.2607ZM32.536 30.6566C32.8639 31.0388 33.1796 31.321 33.4794 31.5314C34.3102 32.1157 35.0127 32.1396 35.4829 32.1555L35.4997 32.1561V32.4389H34.7846H31.3839C30.1639 32.4389 29.4257 32.3434 28.7163 31.9008C27.916 31.4018 27.1525 30.4616 25.775 28.7209C24.3795 26.9385 18.0605 19.4076 18.0605 19.4076L21.834 15.6447C22.716 14.7968 24.602 11.1871 21.6382 11.1448V10.8613H22.5151H29.7146H29.7197V11.1448C29.4177 11.1448 29.0833 11.1814 28.7069 11.2731C27.5686 11.5521 26.0473 12.3519 23.8868 14.2619C23.0504 15.002 22.1179 15.9076 21.0741 17.0153C21.6812 17.7359 23.74 20.1945 25.6336 22.4558C27.2658 24.4049 28.7752 26.2074 29.1266 26.6243C32.2175 30.2891 32.536 30.6566 32.536 30.6566Z" fill="white"/>
+    </svg>
+
+    <div class="container">
+        <div class="footer__body">
+            <div class="footer__form-society">
+                <h2 class="footer__title">subscribe and go deeper</h2>
+                <form action="#" class="footerForm">
+                    <input type="email" placeholder="Email address" class="footerForm__input">
+                    <a href="#" class="footerForm__btn">Subscribe</a>
+                </form>
+                <div class="social__nav">
+                    <div class="svg__nav">
+                        <a href="#" class="social__item instagram"><svg width="31" height="32" viewBox="0 0 31 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.2682 16.1024C18.2682 17.7233 16.9543 19.0373 15.3333 19.0373C13.7124 19.0373 12.3984 17.7233 12.3984 16.1024C12.3984 14.4814 13.7124 13.1675 15.3333 13.1675C16.9543 13.1675 18.2682 14.4814 18.2682 16.1024Z" fill="white"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M22.1973 10.9097C22.0562 10.5274 21.8311 10.1814 21.5387 9.89736C21.2546 9.6049 20.9088 9.37982 20.5263 9.23874C20.2161 9.11825 19.75 8.97482 18.8916 8.93575C17.963 8.8934 17.6845 8.88428 15.3336 8.88428C12.9825 8.88428 12.7041 8.89317 11.7757 8.93552C10.9172 8.97482 10.4509 9.11825 10.1409 9.23874C9.75839 9.37982 9.41235 9.6049 9.12855 9.89736C8.83609 10.1814 8.61101 10.5272 8.4697 10.9097C8.3492 11.22 8.20578 11.6863 8.16671 12.5447C8.12436 13.4731 8.11523 13.7515 8.11523 16.1027C8.11523 18.4536 8.12436 18.732 8.16671 19.6606C8.20578 20.519 8.3492 20.9851 8.4697 21.2953C8.61101 21.6779 8.83586 22.0237 9.12832 22.3077C9.41235 22.6002 9.75816 22.8253 10.1407 22.9663C10.4509 23.0871 10.9172 23.2305 11.7757 23.2696C12.7041 23.3119 12.9822 23.3208 15.3334 23.3208C17.6848 23.3208 17.9632 23.3119 18.8913 23.2696C19.7498 23.2305 20.2161 23.0871 20.5263 22.9663C21.2942 22.6701 21.9011 22.0632 22.1973 21.2953C22.3178 20.9851 22.4612 20.519 22.5005 19.6606C22.5429 18.732 22.5518 18.4536 22.5518 16.1027C22.5518 13.7515 22.5429 13.4731 22.5005 12.5447C22.4615 11.6863 22.318 11.22 22.1973 10.9097ZM15.3336 20.6236C12.8365 20.6236 10.8122 18.5996 10.8122 16.1024C10.8122 13.6053 12.8365 11.5812 15.3336 11.5812C17.8305 11.5812 19.8548 13.6053 19.8548 16.1024C19.8548 18.5996 17.8305 20.6236 15.3336 20.6236ZM18.977 11.4025C18.977 11.986 19.4501 12.4591 20.0336 12.4591C20.6171 12.4591 21.0899 11.986 21.0902 11.4025C21.0902 10.819 20.6171 10.3459 20.0336 10.3459C19.4501 10.3459 18.977 10.819 18.977 11.4025Z" fill="white"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 16.1024C0 7.6353 6.86626 0.769043 15.3333 0.769043C23.8004 0.769043 30.6667 7.6353 30.6667 16.1024C30.6667 24.5694 23.8004 31.4357 15.3333 31.4357C6.86626 31.4357 0 24.5694 0 16.1024ZM23.6757 21.8697C23.8933 21.3096 24.0423 20.6697 24.0849 19.7324C24.128 18.7935 24.138 18.4935 24.138 16.1024C24.138 13.7112 24.128 13.4113 24.0851 12.4723C24.0423 11.5351 23.8935 10.8952 23.6757 10.335C23.4548 9.74755 23.1081 9.21551 22.6603 8.77565C22.2204 8.3276 21.6881 7.98086 21.1006 7.75976C20.5405 7.5424 19.9006 7.3936 18.9633 7.35102C18.0244 7.30797 17.7245 7.29767 15.3333 7.29767C12.9422 7.29767 12.6422 7.30797 11.7033 7.35078C10.766 7.3936 10.1261 7.5424 9.56602 7.75999C8.97852 7.98109 8.44624 8.3276 8.00662 8.77565C7.55857 9.21527 7.21183 9.74755 6.99073 10.335C6.77314 10.8952 6.62433 11.5351 6.58175 12.4723C6.5387 13.4113 6.52864 13.7112 6.52864 16.1024C6.52864 18.4935 6.5387 18.7935 6.58199 19.7326C6.62457 20.6697 6.77361 21.3098 6.9912 21.8697C7.2123 22.4572 7.5588 22.9894 8.00662 23.4291C8.44648 23.8771 8.97852 24.2236 9.56625 24.4447C10.1261 24.6623 10.7663 24.8111 11.7033 24.8539C12.6425 24.8968 12.9422 24.907 15.3336 24.907C17.7247 24.907 18.0247 24.8968 18.9636 24.8539C19.9006 24.8111 20.5408 24.6623 21.1006 24.4447C22.2833 23.9873 23.2183 23.0524 23.6757 21.8697Z" fill="white"/>
+                        </svg>
+                        </a>
+                        <a href="#" class="social__item facebook"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666992 16.1024C0.666992 7.63398 7.53193 0.769043 16.0003 0.769043C24.4687 0.769043 31.3337 7.63398 31.3337 16.1024C31.3337 24.5708 24.4687 31.4357 16.0003 31.4357C7.53193 31.4357 0.666992 24.5708 0.666992 16.1024ZM19.7293 8.5786L21.85 8.57766H21.8504V4.84245L18.7598 4.83774C15.7026 4.83774 13.6085 6.70441 13.6085 10.1319V13.0853H10.1506V17.09H13.6085V27.367H17.7449V17.09H21.7086L21.7104 13.0853H17.7446V10.5284C17.7446 9.36888 18.0662 8.5786 19.7293 8.5786Z" fill="white"/>
+                        </svg>
+                        </a>
+                        <a href="#" class="social__item twitter"><svg width="31" height="32" viewBox="0 0 31 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.333008 16.1024C0.333008 7.6353 7.19927 0.769043 15.6663 0.769043C24.1334 0.769043 30.9997 7.6353 30.9997 16.1024C30.9997 24.5694 24.1334 31.4357 15.6663 31.4357C7.19927 31.4357 0.333008 24.5694 0.333008 16.1024ZM22.6774 13.1792C22.6774 13.0269 22.6742 12.8753 22.6674 12.7244C23.3545 12.2276 23.9519 11.6076 24.4228 10.9017C23.7923 11.182 23.1138 11.3709 22.4018 11.456C23.1285 11.0201 23.6863 10.3309 23.9495 9.5094C23.2694 9.91253 22.5165 10.2055 21.7147 10.3636C21.0724 9.6795 20.1581 9.25157 19.1457 9.25157C17.2021 9.25157 15.6259 10.8278 15.6259 12.7707C15.6259 13.0468 15.657 13.3154 15.7173 13.5732C12.7923 13.426 10.1985 12.0255 8.46293 9.89592C8.16065 10.416 7.98634 11.0201 7.98634 11.6649C7.98634 12.886 8.60753 13.9639 9.55252 14.5945C8.97509 14.5767 8.43275 14.4181 7.9585 14.1544C7.95803 14.1691 7.95803 14.1834 7.95803 14.1993C7.95803 15.9035 9.17116 17.3267 10.7816 17.6492C10.4858 17.7299 10.1746 17.7732 9.85341 17.7732C9.62716 17.7732 9.40653 17.7507 9.19198 17.7095C9.64026 19.1079 10.9393 20.1255 12.4799 20.154C11.2752 21.0981 9.75771 21.6605 8.10871 21.6605C7.8249 21.6605 7.54461 21.6444 7.26923 21.6119C8.82675 22.6102 10.6763 23.1928 12.6638 23.1928C19.1375 23.1926 22.6774 17.8298 22.6774 13.1792Z" fill="white"/>
+                        </svg>
+                        </a>
+                        <a href="#" class="social__item linkedln"><svg width="31" height="32" viewBox="0 0 31 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 16.1024C0 7.6353 6.86626 0.769043 15.3333 0.769043C23.8004 0.769043 30.6667 7.6353 30.6667 16.1024C30.6667 24.5694 23.8004 31.4357 15.3333 31.4357C6.86626 31.4357 0 24.5694 0 16.1024ZM7.14328 23.9487H10.8776V12.7138H7.14328V23.9487ZM9.01058 11.1797H8.98624C7.73311 11.1797 6.92264 10.317 6.92264 9.2389C6.92264 8.13645 7.75791 7.29767 9.03538 7.29767C10.3128 7.29767 11.099 8.13645 11.1233 9.2389C11.1233 10.317 10.3128 11.1797 9.01058 11.1797ZM20.6091 23.9488H24.343V17.5067C24.343 14.0559 22.5007 12.4502 20.0438 12.4502C18.0626 12.4502 17.1747 13.539 16.6784 14.3046V12.7138H12.9443C12.9932 13.7679 12.9443 23.9488 12.9443 23.9488H16.6784V17.6747C16.6784 17.3389 16.7025 17.0034 16.8012 16.7634C17.0712 16.0926 17.6856 15.3977 18.7172 15.3977C20.0684 15.3977 20.6091 16.4279 20.6091 17.9383V23.9488Z" fill="white"/>
+                        </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footerNav">
+                <div class="footerNav__item">
+                    <h2 class="footer__title">Jump in</h2>
+                    <a href="signup.html" class="footerNav__link">Sign up to X</a>
+                    <a href="login.html" class="footerNav__link">Login to X</a>
+                    <a href="index.html" class="footerNav__link">It’s a Kitten’s World Store</a>
+                </div>
+
+                <div class="footerNav__item">
+                    <h2 class="footer__title">KK</h2>
+                    <a href="theApps.html" class="footerNav__link">X App</a>
+                    <a href="parties.html" class="footerNav__link">Parties</a>
+                    <a href="stories.html" class="footerNav__link">Kittens’ Stories</a>
+                    <a href="#" class="footerNav__link">Safety at KK</a>
+                </div>
+
+                <div class="footerNav__item">
+                    <h2 class="footer__title">Company</h2>
+                    <a href="#" class="footerNav__link">About</a>
+                    <a href="#" class="footerNav__link">Press</a>
+                    <a href="#" class="footerNav__link">The KK Group</a>
+                </div>
+
+
+                <div class="footerNav__item">
+                    <h2 class="footer__title">Community</h2>
+                    <a href="#" class="footerNav__link">Support & Help</a>
+                    <a href="faq.html" class="footerNav__link">FAQ</a>
+                </div>
+
+                <div class="footerNav__item">
+                    <h2 class="footer__title">Advertise</h2>
+                    <a href="#" class="footerNav__link">Media Kit</a>
+                    <a href="#" class="footerNav__link">Contact</a>
+                </div>
+            </div>
+        </div>
+        <div class="footerBottom">
+            <p class="footerBottom__text"> © Killing Kittens Ltd., All rights reserved   <span class="footerbottom__links"><a href="#"  class="footerBottom__text">Terms</a>
+                  <a href="#" class="footerBottom__text">Privacy</a> <a href="#" class="footerBottom__text">Cookie Policy</a></span>
+            </p>
+            <img src="img/iab%20logo.png" class="footerbottom__logo" alt="">
+        </div>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest/dist/hls.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/app.min.js"></script>
+
+</body>
+</html>

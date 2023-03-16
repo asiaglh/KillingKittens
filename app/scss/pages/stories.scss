@@ -1,0 +1,116 @@
+.stories__container{
+  width: 100%;
+  padding: 170px 0 70px;
+  height: auto;
+  background-color: #171C22;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  @include tabletL{
+    padding: 130px 30px 50px;
+  }
+  @include mobileL{
+    padding: 110px 25px 50px;
+  }
+  .stories__title{
+    .h1__title{
+      font-size: 50px;
+      @include mobileL{
+        font-size: 32px;
+        line-height: 37px;
+        letter-spacing: 0.25em;
+        margin-bottom: 20px;
+      }
+    }
+    max-width: 700px;
+    @include mobileL{
+      margin: 0;
+      padding: 0 20px;
+      .main__btn{
+        display: none;
+      }
+    }
+    margin: 0 auto 90px;
+    text-align: center;
+    .text__title{
+      margin-bottom: 30px;
+    }
+
+  }
+  .stories__items{
+    max-width: 1220px;
+    display: grid;
+    grid-template-columns: repeat(3,4fr);
+    gap: 30px;
+    @include tabletM{
+      grid-template-columns: repeat(2,6fr);
+    }
+    @include tablet{
+      grid-template-columns:repeat(1,12fr);
+    }
+    @include mobileL{
+      padding: 30px 0 0;
+    }
+    .stories__item{
+      width: 380px;
+      margin-bottom: 30px;
+      height: 280px;
+
+      @include tablet{
+        width: 450px;
+        margin-bottom: 15px;
+        height: auto;
+      }
+      @include mobileL{
+        width: auto;
+      }
+    }
+    .stories__item.textItem{
+      justify-self: center;
+      position: relative;
+      background: #FFFFFF;
+      border-radius: 20px;
+      display: flex;
+      .main__text {
+        font-size: 16px;
+        line-height: 26px;
+      }
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 50px 40px;
+      @include mobileL{
+        padding: 30px 20px;
+      }
+
+      .textItem__decor{
+        top: -25px;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        background: linear-gradient(180deg, #A3B7C7 0%, #738A9C 100%);
+        border-radius: 30px;
+        padding: 10px;
+        width: 50px;
+        height: 50px;
+        img{
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+    .stories__item.imgItem{
+      width: 100%;
+      height: auto;
+      justify-self: center;
+      border-radius: 20px;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+      }
+    }
+  }
+}

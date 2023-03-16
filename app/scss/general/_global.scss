@@ -1,0 +1,390 @@
+*{
+  box-sizing: border-box;
+  font-family: var(--secondaryFont);
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+
+body{
+  background: #FFFFFF;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body.stopScroll{
+  overflow: hidden;
+}
+
+.container {
+  padding-left: 100px;
+  padding-right: 100px;
+  max-width: 1920px;
+  margin: auto;
+  width: 100%;
+  @include mobileL{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+img{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button{
+  cursor: pointer;
+}
+
+.overflow{
+  overflow: hidden
+}
+
+a{
+  text-decoration: none;
+}
+
+a,p,ul,li{
+  font-family: var(--mainFont);
+}
+
+.h4__title{
+  font-family: 'GillSansMedium';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  background: linear-gradient(180deg, #A3B7C7 0%, #738A9C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+  @include laptop{
+    font-size: 18px;
+  }
+  @include tabletL{
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+
+}
+
+.h1__title{
+  font-family: 'GillSansMedium';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 69px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 10px;
+  @include tabletL{
+    font-size: 50px;
+    line-height: 40px;
+    margin-bottom: 10px;
+  }
+  @include mobileL{
+    font-size: 32px;
+    line-height: 49px;
+  }
+}
+
+.h2__title{
+  font-family: 'GillSansMedium';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 59px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 10px;
+  @include tabletL{
+    font-size: 37px;
+    line-height: 40px;
+    margin-bottom: 10px;
+  }
+  @include mobileL{
+    font-size: 32px;
+    line-height: 45px;
+  }
+}
+
+.h3__title{
+  font-family: 'Gill Sans Pro';
+  font-style: normal;
+  font-weight: 500;
+  color: var(--midnight);
+  font-size: 35px;
+  line-height: 40px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  @include mobileL{
+    font-size: 22px;
+    line-height: 27px;
+    margin-bottom: 20px;
+  }
+}
+
+.text__title{
+  font-family: 'Faro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: #F7F5F7;
+  @include tablet{
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
+
+.main__btn{
+  padding: 13px 40px;
+  background: #FFFFFF;
+  display: inline-block;
+  width: auto;
+  color: #171C22;
+  font-family: 'FaroSemiBoldSad';
+  font-style: normal;
+  font-size: 20px;
+  line-height: 28px;
+  border-radius: 63px;
+  transition: 0.3s;
+  text-align: center;
+  @include tabletM{
+    font-size: 17px;
+  }
+}
+
+.main__btn:hover{
+  background: rgba(255, 255, 255, 0.42);
+  color: #FFFFFF;
+}
+
+.main__btn.black{
+  background: #1D192E;
+  color: #FFFFFF;
+}
+
+.main__btn.black:hover{
+  background: #5B5576;
+}
+
+.footer__title {
+  font-family: 'GillSansC';
+  font-style: normal;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--babyBlue);
+  margin-bottom: 15px;
+}
+
+.footerNav__link{
+  font-family: 'Faro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  display: flex;
+  text-transform: capitalize;
+  color: #FFFFFF;
+  margin-bottom: 15px;
+  @include laptop{
+    font-size: 14px;
+  }
+}
+
+.footerNav__link:hover{
+  transition: 0.3s;
+  color: #b7c2d7;
+}
+
+
+.main__text, .rulesList.li{
+  font-family: 'Faro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--midnight);
+  @include tablet{
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+
+
+.pinterestBoard{
+  color: #00D1FF;
+}
+
+.h5__title{
+  font-family: 'Faro';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 40px;
+  color: var(--midnight);
+  @include tabletL{
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+.basicInput {
+  background: transparent;
+  border: none;
+  padding: 15px;
+  font-family: 'Faro';
+  font-size: 20px;
+  line-height: 30px;
+  width: 100%;
+  color: #FFFFFF;
+  @include laptop{
+    font-size: 18px;
+    line-height: 20px;
+  }
+  @include mobileL{
+    font-size: 16px;
+
+  }
+}
+
+.basicInput:-webkit-autofill {
+  transition: all 5000s ease-in-out 0s;
+}
+
+.basicInput:focus {
+  outline: none;
+}
+
+.basicInput:active{
+  background: none;
+}
+
+.basicFormBtn{
+    padding: 1.5% 30%;
+    background: linear-gradient(242.13deg, #DEF9FF -22.79%, #00D1FF 74.76%);
+    border-radius: 63px;
+    font-family: 'Faro';
+    font-weight: 600;
+    font-size: 20px;
+    color: #FFFFFF;
+    text-align: center;
+    border: none;
+    margin: 20px auto;
+    display: block;
+  transition: 0.3s;
+  @include laptop{
+    font-size: 16px;
+  }
+}
+.basicFormBtn:hover{
+  background: linear-gradient(242.13deg, #DEF9FF -22.79%, rgba(0, 209, 255, 0.53) 74.76%);
+  transform: scale(1.05);
+
+}
+
+.subtitle{
+  font-family: 'SmoothStoneRegular';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 45px;
+  line-height: 74px;
+  text-align: center;
+  background: linear-gradient(180deg, #A3B7C7 0%, #738A9C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  margin-bottom: -10px;
+  @include tabletL{
+    margin-bottom: 0;
+  }
+  @include tablet{
+    font-size: 34px;
+    line-height: 56px;
+  }
+}
+
+.formLink{
+  font-family: 'Faro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  transition: 0.3s;
+  color: #00D1FF;
+  @include tabletL{
+    font-size: 16px;
+  }
+}
+.formLink:hover{
+  color: #FFFFFF;
+
+}
+
+.party__calendar{
+  box-shadow: 0px 2.35294px 11.7647px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  padding: 3px 12px;
+  background: #FFFFFF;
+  border-radius: 8px;
+  text-align: center;
+
+  .calendar__month{
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+    color: #F20000;
+  }
+  .calendar__day{
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 30px;
+    color: #171C22;
+  }
+}
+
+.h6__title{
+  font-family: 'Faro';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 24px;
+  color: #171C22;
+}
+
+.party__time{
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  color: #738A9C;
+}
+
+.toCalendar{
+  font-family: 'Faro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #1D192E;
+}

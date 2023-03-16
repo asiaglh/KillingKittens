@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="css/app.min.css">
+    <link rel="stylesheet" href="fonts/stylesheet.css">
+    <link rel="stylesheet" href="fonts/stylesheet2.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+
+    <title>Kittens stories</title>
+
+</head>
+
+<body>
+
+<header class="header">
+    <div class="header__body">
+        <a class="logo__link" href="index.html">
+                 <span class="small__logo">
+                 <svg class="header__logo inactive" width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.19945 2.5625V2.84534C6.12246 2.84534 5.53376 2.97554 5.53376 4.56293V24.0362C5.53376 25.5165 5.9751 25.8846 7.0297 25.8846V26.1681H0V25.8846C1.0286 25.8846 1.3717 25.5165 1.3717 24.0362V4.56293C1.3717 3.21413 1.05243 2.84534 0 2.84534V2.5625H7.19945ZM16.766 25.2607C16.4662 25.0497 16.1505 24.7681 15.8226 24.3859C15.8226 24.3859 15.5041 24.0184 12.4132 20.353C12.0368 19.9065 11.6202 19.412 11.1579 18.8634L11.1565 18.8617L11.1506 18.8547C10.6824 18.2991 10.1675 17.688 9.60047 17.0153C10.6442 15.907 11.576 15.0014 12.4132 14.2619C14.5737 12.3512 16.0949 11.5514 17.2326 11.2724C17.6089 11.1807 17.9441 11.1442 18.246 11.1442V10.8613H18.241H11.0408H10.1646V11.1442C13.1283 11.1871 11.2416 14.7968 10.3604 15.6447L6.58691 19.4069C6.58691 19.4069 7.66607 20.6679 9.06161 22.4502C10.4391 24.1909 11.2026 25.1312 12.0029 25.6301C12.7123 26.0721 13.4505 26.1683 14.6705 26.1683H18.0712H18.7863V25.8854L18.7695 25.8848C18.2993 25.8689 17.5968 25.8451 16.766 25.2607ZM32.036 30.6566C32.3639 31.0388 32.6796 31.321 32.9794 31.5314C33.8102 32.1157 34.5127 32.1396 34.9829 32.1555L34.9997 32.1561V32.4389H34.2846H30.8839C29.6639 32.4389 28.9257 32.3434 28.2163 31.9008C27.416 31.4018 26.6525 30.4616 25.275 28.7209C23.8795 26.9385 17.5605 19.4076 17.5605 19.4076L21.334 15.6447C22.216 14.7968 24.102 11.1871 21.1382 11.1448V10.8613H22.0151H29.2146H29.2197V11.1448C28.9177 11.1448 28.5833 11.1814 28.2069 11.2731C27.0686 11.5521 25.5473 12.3519 23.3868 14.2619C22.5504 15.002 21.6179 15.9076 20.5741 17.0153C21.1812 17.7359 23.24 20.1945 25.1336 22.4558C26.7658 24.4049 28.2752 26.2074 28.6266 26.6243C31.7175 30.2891 32.036 30.6566 32.036 30.6566Z" fill="#315369"/>
+             </svg>
+                 <svg class="header__logo active" width="35" height="30" viewBox="0 0 35 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path fill-rule="evenodd" clip-rule="evenodd" d="M7.19945 0V0.282844C6.12246 0.282844 5.53376 0.413042 5.53376 2.00043V21.4737C5.53376 22.954 5.9751 23.3221 7.0297 23.3221V23.6056H0V23.3221C1.0286 23.3221 1.3717 22.954 1.3717 21.4737V2.00043C1.3717 0.651632 1.05243 0.282844 0 0.282844V0H7.19945ZM16.766 22.6982C16.4662 22.4872 16.1505 22.2056 15.8226 21.8234C15.8226 21.8234 15.5041 21.4559 12.4132 17.7905C12.0368 17.344 11.6202 16.8495 11.1579 16.3009L11.1565 16.2992L11.1506 16.2922C10.6824 15.7366 10.1675 15.1255 9.60047 14.4528C10.6442 13.3445 11.576 12.4389 12.4132 11.6994C14.5737 9.78873 16.0949 8.98894 17.2326 8.70995C17.6089 8.61823 17.9441 8.58167 18.246 8.58167V8.29883H18.241H11.0408H10.1646V8.58167C13.1283 8.62464 11.2416 12.2343 10.3604 13.0822L6.58691 16.8444C6.58691 16.8444 7.66607 18.1054 9.06161 19.8877C10.4391 21.6284 11.2026 22.5687 12.0029 23.0676C12.7123 23.5096 13.4505 23.6058 14.6705 23.6058H18.0712H18.7863V23.3229L18.7695 23.3223C18.2993 23.3064 17.5968 23.2826 16.766 22.6982ZM32.036 28.0941C32.3639 28.4763 32.6796 28.7585 32.9794 28.9689C33.8102 29.5532 34.5127 29.5771 34.9829 29.593L34.9997 29.5936V29.8764H34.2846H30.8839C29.6639 29.8764 28.9257 29.7809 28.2163 29.3383C27.416 28.8393 26.6525 27.8991 25.275 26.1584C23.8795 24.376 17.5605 16.8451 17.5605 16.8451L21.334 13.0822C22.216 12.2343 24.102 8.62464 21.1382 8.58231V8.29883H22.0151H29.2146H29.2197V8.58231C28.9177 8.58231 28.5833 8.61887 28.2069 8.71059C27.0686 8.98958 25.5473 9.78937 23.3868 11.6994C22.5504 12.4395 21.6179 13.3451 20.5741 14.4528C21.1812 15.1734 23.24 17.632 25.1336 19.8933C26.7658 21.8424 28.2752 23.6449 28.6266 24.0618C31.7175 27.7266 32.036 28.0941 32.036 28.0941Z" fill="white"/>
+                 </svg>
+                </span>
+            <span class="big__logo">
+                     <img src="img/LogoBlack.svg" alt="" class="header__logo inactive"><img src="img/Logo.svg" alt="" class="header__logo active">
+                 </span>
+        </a>
+        <div class="header__nav">
+            <div class="nav__items-wrapper">
+                <a href="signup.html" class="nav__item signUp">Sign up</a>
+                <a href="login.html" class="nav__item login">Login</a>
+            </div>
+            <div class="header__burger black">
+                <span></span>
+            </div>
+            <div class="burger__menu">
+                <div class="menu__items">
+                    <div class="menu__items-wrapper">
+                        <a  class="menu__item parties" href="parties.html">Parties <span class="subItem">BROWSE UPCOMING PARTIES</span></a>
+                        <a  class="menu__item values" href="manifesto.html">OUR Values<span class="subItem ">Body positivity and Toxic Masculinity</span></a>
+                        <a class="menu__item membership" href="partner.html">Membership<span class="subItem ">Explore membership benefits</span></a>
+                        <a  class="menu__item happens" href="happens.html">What happens at kk<span class="subItem">safety and Consent</span></a>
+                        <a  class="menu__item stories" href="stories.html">KITTEN & Proud<span class="subItem">Love from our Members</span></a>
+                        <a  target="_blank" class="menu__item merch" href="https://itsakittensworld.com/">MERCH<span class="subItem">BUY MASKS AND KK MERCH <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M13.875 3.75C13.875 3.33579 14.2108 3 14.625 3H20.25C20.6642 3 21 3.33579 21 3.75V9.375C21 9.78921 20.6642 10.125 20.25 10.125C19.8358 10.125 19.5 9.78921 19.5 9.375V4.5H14.625C14.2108 4.5 13.875 4.16421 13.875 3.75Z" fill="url(#paint0_linear_2762_22144)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M20.7803 3.21967C21.0732 3.51256 21.0732 3.98744 20.7803 4.28033L14.0303 11.0303C13.7374 11.3232 13.2626 11.3232 12.9697 11.0303C12.6768 10.7374 12.6768 10.2626 12.9697 9.96967L19.7197 3.21967C20.0126 2.92678 20.4874 2.92678 20.7803 3.21967Z" fill="url(#paint1_linear_2762_22144)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M3.43934 6.43934C3.72064 6.15804 4.10217 6 4.5 6H10.5C10.9142 6 11.25 6.33579 11.25 6.75C11.25 7.16421 10.9142 7.5 10.5 7.5L4.5 7.5L4.5 19.5H16.5V13.5C16.5 13.0858 16.8358 12.75 17.25 12.75C17.6642 12.75 18 13.0858 18 13.5V19.5C18 19.8978 17.842 20.2794 17.5607 20.5607C17.2794 20.842 16.8978 21 16.5 21H4.5C4.10218 21 3.72065 20.842 3.43934 20.5607C3.15804 20.2794 3 19.8978 3 19.5V7.5C3 7.10217 3.15804 6.72064 3.43934 6.43934Z" fill="url(#paint2_linear_2762_22144)"/>
+<defs>
+<linearGradient id="paint0_linear_2762_22144" x1="17.4375" y1="3" x2="17.4375" y2="10.125" gradientUnits="userSpaceOnUse">
+<stop stop-color="#A3B7C7"/>
+<stop offset="1" stop-color="#738A9C"/>
+</linearGradient>
+<linearGradient id="paint1_linear_2762_22144" x1="16.875" y1="3" x2="16.875" y2="11.25" gradientUnits="userSpaceOnUse">
+<stop stop-color="#A3B7C7"/>
+<stop offset="1" stop-color="#738A9C"/>
+</linearGradient>
+<linearGradient id="paint2_linear_2762_22144" x1="10.5" y1="6" x2="10.5" y2="21" gradientUnits="userSpaceOnUse">
+<stop stop-color="#A3B7C7"/>
+<stop offset="1" stop-color="#738A9C"/>
+</linearGradient>
+</defs>
+</svg></span></a>
+                        <a  class="menu__item app"  href="theApps.html">THE APP<span class="subItem">CHAT, MEET And DATE KK MEMBERS</span></a>
+                    </div>
+                    <div class="social__nav headerNav">
+                        <div class="svg__nav"><a target="_blank" href="#" class="social__item instagram"><img src="img/inst.svg" alt=""></a>
+                            <a target="_blank" href="#" class="social__item facebook"><img src="img/facebook.svg" alt=""></a>
+                            <a target="_blank" href="#" class="social__item twitter"><img src="img/twitter.svg" alt=""></a>
+                            <a target="_blank" href="#" class="social__item linkedln"><img src="img/linkedln.svg" alt=""></a>
+                        </div>
+                        <div class="text__nav">
+
+                            <a  href="heritage.html" class="social__item partner">Our heritage</a>
+                            <a target="_blank" href="https://wearekk.com/press/" class="social__item press">Press</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="menuImg__list">
+                    <div class="menuImg__list-wrapper">
+                        <img src="img/header.jfif" alt="" class="menuImg__item active">
+                        <video id="parties"  class="menuImg__item hls-video"
+                               data-url="https://customer-6a4xpwe335oywcc8.cloudflarestream.com/2c17d6af075fa248f2c6a413616e3621/manifest/video.m3u8"  autoplay playsinline loop oncontextmenu="return false;"  preload="auto" muted>
+                        </video>
+                        <img id="happens" class="menuImg__item" alt="" src="img/safety_menu.png">
+                        <video id="values"  class="menuImg__item hls-video"
+                               data-url="https://customer-6a4xpwe335oywcc8.cloudflarestream.com/d4ae495bd3d00821a4cb1e56f1b9e9f8/manifest/video.m3u8" autoplay playsinline loop oncontextmenu="return false;"  preload="auto" muted>
+                        </video>
+                        <video id="stories"  class="menuImg__item hls-video"
+                               data-url="https://customer-6a4xpwe335oywcc8.cloudflarestream.com/8a2be9404fc82412b6879e159f6bdaef/manifest/video.m3u8" autoplay playsinline loop oncontextmenu="return false;"  preload="auto" muted>
+                        </video>
+                        <video id="merch"  class="menuImg__item hls-video"
+                               data-url="https://customer-6a4xpwe335oywcc8.cloudflarestream.com/582f4a1d934cbd2971bb591e1d463f90/manifest/video.m3u8" autoplay playsinline loop oncontextmenu="return false;"  preload="auto" muted>
+                        </video>
+                        <video id="app"  class="menuImg__item hls-video"
+                               data-url="https://customer-6a4xpwe335oywcc8.cloudflarestream.com/685f79b6a2fdb08fae68ac1243c891c1/manifest/video.m3u8" autoplay playsinline loop oncontextmenu="return false;"  preload="auto" muted>
+                        </video>
+                        <img id="membership" class="menuImg__item" alt="" src="img/faq_menu.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<main class="main">
+
+    <div class="happens__body">
+        <div class="happens__info">
+            <div class="happens__title">
+                <h4 class="subtitle">Behind the veil</h4>
+                <h2 class="h2__title">What happens at kk</h2>
+                <p class="text__title">Killing Kittens maintains a little mystique, but we understand that attending one of our parties can be both exciting and nerve-wracking. We're here to put your mind at ease and help you have a fun, enjoyable experience.</p>
+            </div>
+            <div class="happens__img">
+                <img src="img/happens.png" alt="">
+            </div>
+            <div class="happens__accordion">
+                <h4 class="happens__accordion-title">popular questions</h4>
+                <div class="accordion js-accordion">
+
+                    <div class="accordion__item js-accordion-item">
+                        <div class="accordion-header js-accordion-header"><h3 class="h5__title">Who comes to kk?
+                            <svg  class="accordion__arrow active" width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.560056 0.664049C0.654536 0.569329 0.766776 0.494179 0.890346 0.442903C1.01391 0.391628 1.14639 0.365234 1.28017 0.365234C1.41396 0.365234 1.54643 0.391628 1.67 0.442903C1.79357 0.494179 1.9058 0.569329 2.00029 0.664049L8.76204 7.42581C8.83747 7.50108 8.89732 7.5905 8.93815 7.68893C8.97898 7.78737 9 7.89289 9 7.99946C9 8.10602 8.97898 8.21155 8.93815 8.30998C8.89732 8.40841 8.83747 8.49783 8.76204 8.57311L2.00029 15.3349C1.60158 15.7336 0.958763 15.7336 0.560056 15.3349C0.161348 14.9362 0.161348 14.2933 0.560056 13.8946L6.45116 7.99539L0.55192 2.09614C0.161349 1.70557 0.161348 1.05462 0.560056 0.664049Z" fill="#DBDDE2"/>
+                            </svg>
+                            <svg class="accordion__arrow" width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.9707 0.930173C15.0654 1.02465 15.1406 1.13689 15.1919 1.26046C15.2431 1.38403 15.2695 1.5165 15.2695 1.65029C15.2695 1.78407 15.2431 1.91654 15.1919 2.04011C15.1406 2.16368 15.0654 2.27592 14.9707 2.3704L8.20896 9.13216C8.13368 9.20759 8.04427 9.26744 7.94583 9.30827C7.8474 9.3491 7.74188 9.37012 7.63531 9.37012C7.52874 9.37012 7.42322 9.3491 7.32479 9.30827C7.22635 9.26744 7.13694 9.20759 7.06166 9.13216L0.299901 2.3704C-0.0988072 1.97169 -0.0988072 1.32888 0.299901 0.930173C0.698609 0.531465 1.34142 0.531465 1.74013 0.930173L7.63938 6.82128L13.5386 0.922037C13.9292 0.531466 14.5801 0.531466 14.9707 0.930173Z" fill="#DBDDE2"/>
+                            </svg>
+
+                        </h3></div>
+                        <div class="accordion-body js-accordion-body">
+                            <div class="accordion-body__contents">
+                                <p class="main__text">At Killing Kittens we’re all about creating safer spaces for your pleasure and exploration. From ticketing to staff, emails to aftercare, your safety and comfort are considered at every stage.</p>
+                            </div>
+                        </div><!-- end of accordion body -->
+                    </div><!-- end of accordion item -->
+                    <div class="accordion__item js-accordion-item">
+                        <div class="accordion-header js-accordion-header"><h3 class="h5__title">Do I have to get naked?
+                            <svg  class="accordion__arrow active" width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.560056 0.664049C0.654536 0.569329 0.766776 0.494179 0.890346 0.442903C1.01391 0.391628 1.14639 0.365234 1.28017 0.365234C1.41396 0.365234 1.54643 0.391628 1.67 0.442903C1.79357 0.494179 1.9058 0.569329 2.00029 0.664049L8.76204 7.42581C8.83747 7.50108 8.89732 7.5905 8.93815 7.68893C8.97898 7.78737 9 7.89289 9 7.99946C9 8.10602 8.97898 8.21155 8.93815 8.30998C8.89732 8.40841 8.83747 8.49783 8.76204 8.57311L2.00029 15.3349C1.60158 15.7336 0.958763 15.7336 0.560056 15.3349C0.161348 14.9362 0.161348 14.2933 0.560056 13.8946L6.45116 7.99539L0.55192 2.09614C0.161349 1.70557 0.161348 1.05462 0.560056 0.664049Z" fill="#DBDDE2"/>
+                            </svg>
+                            <svg class="accordion__arrow" width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.9707 0.930173C15.0654 1.02465 15.1406 1.13689 15.1919 1.26046C15.2431 1.38403 15.2695 1.5165 15.2695 1.65029C15.2695 1.78407 15.2431 1.91654 15.1919 2.04011C15.1406 2.16368 15.0654 2.27592 14.9707 2.3704L8.20896 9.13216C8.13368 9.20759 8.04427 9.26744 7.94583 9.30827C7.8474 9.3491 7.74188 9.37012 7.63531 9.37012C7.52874 9.37012 7.42322 9.3491 7.32479 9.30827C7.22635 9.26744 7.13694 9.20759 7.06166 9.13216L0.299901 2.3704C-0.0988072 1.97169 -0.0988072 1.32888 0.299901 0.930173C0.698609 0.531465 1.34142 0.531465 1.74013 0.930173L7.63938 6.82128L13.5386 0.922037C13.9292 0.531466 14.5801 0.531466 14.9707 0.930173Z" fill="#DBDDE2"/>
+                            </svg></h3></div>
+                        <div class="accordion-body js-accordion-body">
+                            <div class="accordion-body__contents">
+                                <p class="main__text">At Killing Kittens we’re all about creating safer spaces for your pleasure and exploration. From ticketing to staff, emails to aftercare, your safety and comfort are considered at every stage.</p>
+                            </div>
+                        </div><!-- end of accordion body -->
+                    </div><!-- end of accordion item -->
+                    <div class="accordion__item js-accordion-item">
+                        <div class="accordion-header js-accordion-header"><h3 class="h5__title">Okay...but what actually happens?
+                            <svg  class="accordion__arrow active" width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.560056 0.664049C0.654536 0.569329 0.766776 0.494179 0.890346 0.442903C1.01391 0.391628 1.14639 0.365234 1.28017 0.365234C1.41396 0.365234 1.54643 0.391628 1.67 0.442903C1.79357 0.494179 1.9058 0.569329 2.00029 0.664049L8.76204 7.42581C8.83747 7.50108 8.89732 7.5905 8.93815 7.68893C8.97898 7.78737 9 7.89289 9 7.99946C9 8.10602 8.97898 8.21155 8.93815 8.30998C8.89732 8.40841 8.83747 8.49783 8.76204 8.57311L2.00029 15.3349C1.60158 15.7336 0.958763 15.7336 0.560056 15.3349C0.161348 14.9362 0.161348 14.2933 0.560056 13.8946L6.45116 7.99539L0.55192 2.09614C0.161349 1.70557 0.161348 1.05462 0.560056 0.664049Z" fill="#DBDDE2"/>
+                            </svg>
+                            <svg class="accordion__arrow" width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.9707 0.930173C15.0654 1.02465 15.1406 1.13689 15.1919 1.26046C15.2431 1.38403 15.2695 1.5165 15.2695 1.65029C15.2695 1.78407 15.2431 1.91654 15.1919 2.04011C15.1406 2.16368 15.0654 2.27592 14.9707 2.3704L8.20896 9.13216C8.13368 9.20759 8.04427 9.26744 7.94583 9.30827C7.8474 9.3491 7.74188 9.37012 7.63531 9.37012C7.52874 9.37012 7.42322 9.3491 7.32479 9.30827C7.22635 9.26744 7.13694 9.20759 7.06166 9.13216L0.299901 2.3704C-0.0988072 1.97169 -0.0988072 1.32888 0.299901 0.930173C0.698609 0.531465 1.34142 0.531465 1.74013 0.930173L7.63938 6.82128L13.5386 0.922037C13.9292 0.531466 14.5801 0.531466 14.9707 0.930173Z" fill="#DBDDE2"/>
+                            </svg></h3></div>
+                        <div class="accordion-body js-accordion-body">
+                            <div class="accordion-body__contents">
+                                <p class="main__text">At Killing Kittens we’re all about creating safer spaces for your pleasure and exploration. From ticketing to staff, emails to aftercare, your safety and comfort are considered at every stage.</p>
+                            </div>
+                        </div><!-- end of accordion body -->
+                    </div><!-- end of accordion item -->
+                    </div>
+            </div>
+            <p class="text__title">If you still have questions after reading the information above, don't worry! We have a helpdesk with plenty more frequently asked questions that may be able to assist you. Feel free to check it out for more information.</p>
+           <a href="#" class="main__btn">Go to helpdesk</a>
+        </div>
+        <div class="happens__img">
+            <img src="img/happens.png" alt="">
+        </div>
+    </div>
+
+</main>
+
+<footer class="footer">
+    <img src="img/Logo.svg" alt="" class="footer__logo">
+    <svg class="footer__logo mobile" width="36" height="35" viewBox="0 0 36 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.69945 2.5625V2.84534C6.62246 2.84534 6.03376 2.97554 6.03376 4.56293V24.0362C6.03376 25.5165 6.4751 25.8846 7.5297 25.8846V26.1681H0.5V25.8846C1.5286 25.8846 1.8717 25.5165 1.8717 24.0362V4.56293C1.8717 3.21413 1.55243 2.84534 0.5 2.84534V2.5625H7.69945ZM17.266 25.2607C16.9662 25.0497 16.6505 24.7681 16.3226 24.3859C16.3226 24.3859 16.0041 24.0184 12.9132 20.353C12.5368 19.9065 12.1202 19.412 11.6579 18.8634L11.6565 18.8617L11.6506 18.8547C11.1824 18.2991 10.6675 17.688 10.1005 17.0153C11.1442 15.907 12.076 15.0014 12.9132 14.2619C15.0737 12.3512 16.5949 11.5514 17.7326 11.2724C18.1089 11.1807 18.4441 11.1442 18.746 11.1442V10.8613H18.741H11.5408H10.6646V11.1442C13.6283 11.1871 11.7416 14.7968 10.8604 15.6447L7.08691 19.4069C7.08691 19.4069 8.16607 20.6679 9.56161 22.4502C10.9391 24.1909 11.7026 25.1312 12.5029 25.6301C13.2123 26.0721 13.9505 26.1683 15.1705 26.1683H18.5712H19.2863V25.8854L19.2695 25.8848C18.7993 25.8689 18.0968 25.8451 17.266 25.2607ZM32.536 30.6566C32.8639 31.0388 33.1796 31.321 33.4794 31.5314C34.3102 32.1157 35.0127 32.1396 35.4829 32.1555L35.4997 32.1561V32.4389H34.7846H31.3839C30.1639 32.4389 29.4257 32.3434 28.7163 31.9008C27.916 31.4018 27.1525 30.4616 25.775 28.7209C24.3795 26.9385 18.0605 19.4076 18.0605 19.4076L21.834 15.6447C22.716 14.7968 24.602 11.1871 21.6382 11.1448V10.8613H22.5151H29.7146H29.7197V11.1448C29.4177 11.1448 29.0833 11.1814 28.7069 11.2731C27.5686 11.5521 26.0473 12.3519 23.8868 14.2619C23.0504 15.002 22.1179 15.9076 21.0741 17.0153C21.6812 17.7359 23.74 20.1945 25.6336 22.4558C27.2658 24.4049 28.7752 26.2074 29.1266 26.6243C32.2175 30.2891 32.536 30.6566 32.536 30.6566Z" fill="white"/>
+    </svg>
+
+    <div class="container">
+        <div class="footer__body">
+            <div class="footer__form-society">
+                <h2 class="footer__title">subscribe and go deeper</h2>
+                <form action="#" class="footerForm">
+                    <input type="email" placeholder="Email address" class="footerForm__input">
+                    <a href="#" class="footerForm__btn">Subscribe</a>
+                </form>
+                <div class="social__nav">
+                    <div class="svg__nav">
+                        <a href="#" class="social__item instagram"><svg width="31" height="32" viewBox="0 0 31 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.2682 16.1024C18.2682 17.7233 16.9543 19.0373 15.3333 19.0373C13.7124 19.0373 12.3984 17.7233 12.3984 16.1024C12.3984 14.4814 13.7124 13.1675 15.3333 13.1675C16.9543 13.1675 18.2682 14.4814 18.2682 16.1024Z" fill="white"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M22.1973 10.9097C22.0562 10.5274 21.8311 10.1814 21.5387 9.89736C21.2546 9.6049 20.9088 9.37982 20.5263 9.23874C20.2161 9.11825 19.75 8.97482 18.8916 8.93575C17.963 8.8934 17.6845 8.88428 15.3336 8.88428C12.9825 8.88428 12.7041 8.89317 11.7757 8.93552C10.9172 8.97482 10.4509 9.11825 10.1409 9.23874C9.75839 9.37982 9.41235 9.6049 9.12855 9.89736C8.83609 10.1814 8.61101 10.5272 8.4697 10.9097C8.3492 11.22 8.20578 11.6863 8.16671 12.5447C8.12436 13.4731 8.11523 13.7515 8.11523 16.1027C8.11523 18.4536 8.12436 18.732 8.16671 19.6606C8.20578 20.519 8.3492 20.9851 8.4697 21.2953C8.61101 21.6779 8.83586 22.0237 9.12832 22.3077C9.41235 22.6002 9.75816 22.8253 10.1407 22.9663C10.4509 23.0871 10.9172 23.2305 11.7757 23.2696C12.7041 23.3119 12.9822 23.3208 15.3334 23.3208C17.6848 23.3208 17.9632 23.3119 18.8913 23.2696C19.7498 23.2305 20.2161 23.0871 20.5263 22.9663C21.2942 22.6701 21.9011 22.0632 22.1973 21.2953C22.3178 20.9851 22.4612 20.519 22.5005 19.6606C22.5429 18.732 22.5518 18.4536 22.5518 16.1027C22.5518 13.7515 22.5429 13.4731 22.5005 12.5447C22.4615 11.6863 22.318 11.22 22.1973 10.9097ZM15.3336 20.6236C12.8365 20.6236 10.8122 18.5996 10.8122 16.1024C10.8122 13.6053 12.8365 11.5812 15.3336 11.5812C17.8305 11.5812 19.8548 13.6053 19.8548 16.1024C19.8548 18.5996 17.8305 20.6236 15.3336 20.6236ZM18.977 11.4025C18.977 11.986 19.4501 12.4591 20.0336 12.4591C20.6171 12.4591 21.0899 11.986 21.0902 11.4025C21.0902 10.819 20.6171 10.3459 20.0336 10.3459C19.4501 10.3459 18.977 10.819 18.977 11.4025Z" fill="white"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 16.1024C0 7.6353 6.86626 0.769043 15.3333 0.769043C23.8004 0.769043 30.6667 7.6353 30.6667 16.1024C30.6667 24.5694 23.8004 31.4357 15.3333 31.4357C6.86626 31.4357 0 24.5694 0 16.1024ZM23.6757 21.8697C23.8933 21.3096 24.0423 20.6697 24.0849 19.7324C24.128 18.7935 24.138 18.4935 24.138 16.1024C24.138 13.7112 24.128 13.4113 24.0851 12.4723C24.0423 11.5351 23.8935 10.8952 23.6757 10.335C23.4548 9.74755 23.1081 9.21551 22.6603 8.77565C22.2204 8.3276 21.6881 7.98086 21.1006 7.75976C20.5405 7.5424 19.9006 7.3936 18.9633 7.35102C18.0244 7.30797 17.7245 7.29767 15.3333 7.29767C12.9422 7.29767 12.6422 7.30797 11.7033 7.35078C10.766 7.3936 10.1261 7.5424 9.56602 7.75999C8.97852 7.98109 8.44624 8.3276 8.00662 8.77565C7.55857 9.21527 7.21183 9.74755 6.99073 10.335C6.77314 10.8952 6.62433 11.5351 6.58175 12.4723C6.5387 13.4113 6.52864 13.7112 6.52864 16.1024C6.52864 18.4935 6.5387 18.7935 6.58199 19.7326C6.62457 20.6697 6.77361 21.3098 6.9912 21.8697C7.2123 22.4572 7.5588 22.9894 8.00662 23.4291C8.44648 23.8771 8.97852 24.2236 9.56625 24.4447C10.1261 24.6623 10.7663 24.8111 11.7033 24.8539C12.6425 24.8968 12.9422 24.907 15.3336 24.907C17.7247 24.907 18.0247 24.8968 18.9636 24.8539C19.9006 24.8111 20.5408 24.6623 21.1006 24.4447C22.2833 23.9873 23.2183 23.0524 23.6757 21.8697Z" fill="white"/>
+                        </svg>
+                        </a>
+                        <a href="#" class="social__item facebook"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666992 16.1024C0.666992 7.63398 7.53193 0.769043 16.0003 0.769043C24.4687 0.769043 31.3337 7.63398 31.3337 16.1024C31.3337 24.5708 24.4687 31.4357 16.0003 31.4357C7.53193 31.4357 0.666992 24.5708 0.666992 16.1024ZM19.7293 8.5786L21.85 8.57766H21.8504V4.84245L18.7598 4.83774C15.7026 4.83774 13.6085 6.70441 13.6085 10.1319V13.0853H10.1506V17.09H13.6085V27.367H17.7449V17.09H21.7086L21.7104 13.0853H17.7446V10.5284C17.7446 9.36888 18.0662 8.5786 19.7293 8.5786Z" fill="white"/>
+                        </svg>
+                        </a>
+                        <a href="#" class="social__item twitter"><svg width="31" height="32" viewBox="0 0 31 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.333008 16.1024C0.333008 7.6353 7.19927 0.769043 15.6663 0.769043C24.1334 0.769043 30.9997 7.6353 30.9997 16.1024C30.9997 24.5694 24.1334 31.4357 15.6663 31.4357C7.19927 31.4357 0.333008 24.5694 0.333008 16.1024ZM22.6774 13.1792C22.6774 13.0269 22.6742 12.8753 22.6674 12.7244C23.3545 12.2276 23.9519 11.6076 24.4228 10.9017C23.7923 11.182 23.1138 11.3709 22.4018 11.456C23.1285 11.0201 23.6863 10.3309 23.9495 9.5094C23.2694 9.91253 22.5165 10.2055 21.7147 10.3636C21.0724 9.6795 20.1581 9.25157 19.1457 9.25157C17.2021 9.25157 15.6259 10.8278 15.6259 12.7707C15.6259 13.0468 15.657 13.3154 15.7173 13.5732C12.7923 13.426 10.1985 12.0255 8.46293 9.89592C8.16065 10.416 7.98634 11.0201 7.98634 11.6649C7.98634 12.886 8.60753 13.9639 9.55252 14.5945C8.97509 14.5767 8.43275 14.4181 7.9585 14.1544C7.95803 14.1691 7.95803 14.1834 7.95803 14.1993C7.95803 15.9035 9.17116 17.3267 10.7816 17.6492C10.4858 17.7299 10.1746 17.7732 9.85341 17.7732C9.62716 17.7732 9.40653 17.7507 9.19198 17.7095C9.64026 19.1079 10.9393 20.1255 12.4799 20.154C11.2752 21.0981 9.75771 21.6605 8.10871 21.6605C7.8249 21.6605 7.54461 21.6444 7.26923 21.6119C8.82675 22.6102 10.6763 23.1928 12.6638 23.1928C19.1375 23.1926 22.6774 17.8298 22.6774 13.1792Z" fill="white"/>
+                        </svg>
+                        </a>
+                        <a href="#" class="social__item linkedln"><svg width="31" height="32" viewBox="0 0 31 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 16.1024C0 7.6353 6.86626 0.769043 15.3333 0.769043C23.8004 0.769043 30.6667 7.6353 30.6667 16.1024C30.6667 24.5694 23.8004 31.4357 15.3333 31.4357C6.86626 31.4357 0 24.5694 0 16.1024ZM7.14328 23.9487H10.8776V12.7138H7.14328V23.9487ZM9.01058 11.1797H8.98624C7.73311 11.1797 6.92264 10.317 6.92264 9.2389C6.92264 8.13645 7.75791 7.29767 9.03538 7.29767C10.3128 7.29767 11.099 8.13645 11.1233 9.2389C11.1233 10.317 10.3128 11.1797 9.01058 11.1797ZM20.6091 23.9488H24.343V17.5067C24.343 14.0559 22.5007 12.4502 20.0438 12.4502C18.0626 12.4502 17.1747 13.539 16.6784 14.3046V12.7138H12.9443C12.9932 13.7679 12.9443 23.9488 12.9443 23.9488H16.6784V17.6747C16.6784 17.3389 16.7025 17.0034 16.8012 16.7634C17.0712 16.0926 17.6856 15.3977 18.7172 15.3977C20.0684 15.3977 20.6091 16.4279 20.6091 17.9383V23.9488Z" fill="white"/>
+                        </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footerNav">
+                <div class="footerNav__item">
+                    <h2 class="footer__title">Jump in</h2>
+                    <a href="signup.html" class="footerNav__link">Sign up to X</a>
+                    <a href="login.html" class="footerNav__link">Login to X</a>
+                    <a href="index.html" class="footerNav__link">It’s a Kitten’s World Store</a>
+                </div>
+
+                <div class="footerNav__item">
+                    <h2 class="footer__title">KK</h2>
+                    <a href="theApps.html" class="footerNav__link">X App</a>
+                    <a href="parties.html" class="footerNav__link">Parties</a>
+                    <a href="stories.html" class="footerNav__link">Kittens’ Stories</a>
+                    <a href="#" class="footerNav__link">Safety at KK</a>
+                </div>
+
+                <div class="footerNav__item">
+                    <h2 class="footer__title">Company</h2>
+                    <a href="#" class="footerNav__link">About</a>
+                    <a href="#" class="footerNav__link">Press</a>
+                    <a href="#" class="footerNav__link">The KK Group</a>
+                </div>
+
+
+                <div class="footerNav__item">
+                    <h2 class="footer__title">Community</h2>
+                    <a href="#" class="footerNav__link">Support & Help</a>
+                    <a href="faq.html" class="footerNav__link">FAQ</a>
+                </div>
+
+                <div class="footerNav__item">
+                    <h2 class="footer__title">Advertise</h2>
+                    <a href="#" class="footerNav__link">Media Kit</a>
+                    <a href="#" class="footerNav__link">Contact</a>
+                </div>
+            </div>
+        </div>
+        <div class="footerBottom">
+            <p class="footerBottom__text"> © Killing Kittens Ltd., All rights reserved   <span class="footerbottom__links"><a href="#"  class="footerBottom__text">Terms</a>
+                  <a href="#" class="footerBottom__text">Privacy</a> <a href="#" class="footerBottom__text">Cookie Policy</a></span>
+            </p>
+            <img src="img/iab%20logo.png" class="footerbottom__logo" alt="">
+        </div>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest/dist/hls.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+<script src="js/slick.min.js"></script>
+<script src="js/app.min.js"></script>
+</body>
+</html>
